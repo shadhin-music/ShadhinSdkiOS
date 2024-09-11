@@ -49,10 +49,10 @@ public class ShadhinMusicView: UIView {
         nibSetup()
         fetchDataFromGpExploreMusic()
         viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: isPlaying)
-        seeAllBtn.setClickListener {
-            print("See ALL btn")
-            self.clickListenerForMsisdn()
-        }
+//        seeAllBtn.setClickListener {
+//            print("See ALL btn")
+//            self.clickListenerForMsisdn()
+//        }
         exploreMoreView.setClickListener {
             self.clickListenerForMsisdn()
         }
@@ -88,6 +88,10 @@ public class ShadhinMusicView: UIView {
         //self.view.layer.insertSublayer(gradientLayer, at: 0)
         self.visualEffect.contentView.layer.insertSublayer(gradientLayer, at: 0)
         
+    }
+    @IBAction func seeAllAction(_ sender: Any) {
+        print("See ALL btn")
+        self.clickListenerForMsisdn()
     }
     
     func clickListenerForMsisdn() {

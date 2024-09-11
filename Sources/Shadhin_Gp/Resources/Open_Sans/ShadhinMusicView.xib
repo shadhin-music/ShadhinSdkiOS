@@ -273,35 +273,45 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeE-8M-TQf">
-                    <rect key="frame" x="16" y="21" width="434" height="40"/>
+                    <rect key="frame" x="8" y="21" width="442" height="40"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadhin_logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="gU2-TR-RDg">
-                            <rect key="frame" x="20" y="8" width="74" height="24"/>
+                            <rect key="frame" x="8" y="8" width="74" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="2hv-KG-HjP"/>
                                 <constraint firstAttribute="width" constant="74" id="ot9-1G-sfS"/>
                             </constraints>
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_see_all_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ZtX-A5-wN9">
-                            <rect key="frame" x="102" y="10" width="20" height="20"/>
+                            <rect key="frame" x="90" y="10" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="OKq-xN-4bb"/>
                                 <constraint firstAttribute="width" constant="20" id="jwl-3B-0UL"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUU-gy-aaM">
+                            <rect key="frame" x="0.0" y="3" width="122" height="34"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="seeAllAction:" destination="-1" eventType="touchUpInside" id="tiy-kq-hsV"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="ZtX-A5-wN9" firstAttribute="centerY" secondItem="CeE-8M-TQf" secondAttribute="centerY" id="4iG-7d-W7T"/>
                         <constraint firstItem="gU2-TR-RDg" firstAttribute="centerY" secondItem="CeE-8M-TQf" secondAttribute="centerY" id="GDQ-L9-McC"/>
+                        <constraint firstItem="sUU-gy-aaM" firstAttribute="centerY" secondItem="CeE-8M-TQf" secondAttribute="centerY" id="IZR-fb-J8I"/>
+                        <constraint firstItem="sUU-gy-aaM" firstAttribute="leading" secondItem="CeE-8M-TQf" secondAttribute="leading" id="LVL-4a-Jp1"/>
                         <constraint firstItem="ZtX-A5-wN9" firstAttribute="leading" secondItem="gU2-TR-RDg" secondAttribute="trailing" constant="8" id="NJP-ka-9qe"/>
                         <constraint firstAttribute="height" constant="40" id="UJC-6V-ovq"/>
-                        <constraint firstItem="gU2-TR-RDg" firstAttribute="leading" secondItem="CeE-8M-TQf" secondAttribute="leading" constant="20" id="cHO-mA-Yfg"/>
+                        <constraint firstItem="gU2-TR-RDg" firstAttribute="leading" secondItem="CeE-8M-TQf" secondAttribute="leading" constant="8" id="cHO-mA-Yfg"/>
+                        <constraint firstItem="ZtX-A5-wN9" firstAttribute="leading" secondItem="sUU-gy-aaM" secondAttribute="trailing" constant="-32" id="hvs-iB-Qx7"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="CeE-8M-TQf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="42O-iu-Em9"/>
+                <constraint firstItem="CeE-8M-TQf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="42O-iu-Em9"/>
                 <constraint firstItem="CeE-8M-TQf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="21" id="7pS-20-W2D"/>
                 <constraint firstAttribute="bottom" secondItem="mQp-hW-lfx" secondAttribute="bottom" id="RYv-Ql-sqe"/>
                 <constraint firstItem="mQp-hW-lfx" firstAttribute="top" secondItem="CeE-8M-TQf" secondAttribute="bottom" constant="21" id="hQc-Kn-5E6"/>

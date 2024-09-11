@@ -23,13 +23,13 @@ public class ShadhinMusicView: UIView {
     
     @IBOutlet weak var iCarouselLeftConst: NSLayoutConstraint!
     
+    @IBOutlet weak var seeAllbtn: UIStackView!
     @IBOutlet weak var trendingHitslbl: UILabel!
     @IBOutlet weak var blurImage: UIImageView!
     @IBOutlet weak var gpPlayerSlider: UISlider!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var exploreMoreView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var seeAllBtn: UIView!
     @IBOutlet weak var gpCaroselMusicView: iCarousel!
     var onClick : (GPExploreMusicModel)-> Void = {_ in}
     var isFspagerDirection = false
@@ -49,10 +49,10 @@ public class ShadhinMusicView: UIView {
         nibSetup()
         fetchDataFromGpExploreMusic()
         viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: isPlaying)
-//        seeAllBtn.setClickListener {
-//            print("See ALL btn")
-//            self.clickListenerForMsisdn()
-//        }
+        seeAllbtn.setClickListener {
+            print("See ALL btn")
+            self.clickListenerForMsisdn()
+        }
         exploreMoreView.setClickListener {
             self.clickListenerForMsisdn()
         }
@@ -89,10 +89,10 @@ public class ShadhinMusicView: UIView {
         self.visualEffect.contentView.layer.insertSublayer(gradientLayer, at: 0)
         
     }
-    @IBAction func seeAllAction(_ sender: Any) {
-        print("See ALL btn")
-        self.clickListenerForMsisdn()
-    }
+//    @IBAction func seeAllAction(_ sender: Any) {
+//        print("See ALL btn")
+//        self.clickListenerForMsisdn()
+//    }
     
     func clickListenerForMsisdn() {
         if let accessToken = self.accessToken, let vc = self.vc {

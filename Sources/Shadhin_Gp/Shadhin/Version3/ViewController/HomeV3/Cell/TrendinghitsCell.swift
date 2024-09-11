@@ -74,7 +74,7 @@ class TrendinghitsCell: UICollectionViewCell {
         viewModel.trendingSongInteractionContentId = Int(audioItem?.contentId ?? "-")
         shadhinMusicView.collectionView.reloadData()
         setCurrentButtonImage(playingState: isPlaying)
-        viewModel.goContentPlayingState = isPlaying
+        viewModel.gpContentPlayingState = isPlaying
     }
     
     func setCurrentButtonImage(playingState: PlayingState) {

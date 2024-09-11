@@ -130,9 +130,11 @@ public class ShadhinMusicView: UIView {
             gpCaroselMusicView.scrollToItem(at: index, animated: false)
             
             if AudioPlayer.shared.state.isPlaying {
+                GPAudioViewModel.shared.gpContentPlayingState = .playing
                 isPlaying = .playing
             } else {
                 isPlaying = .pause
+                GPAudioViewModel.shared.gpContentPlayingState = .pause
             }
             viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: isPlaying)
         }
@@ -200,7 +202,7 @@ public class ShadhinMusicView: UIView {
     
     func rememberDataToPlayAgainInSDK() {
         viewModel.trendingSongInteractionContentId = viewModel.trendingSongs.first(where: {$0.contentId == viewModel.gpMusicContents[viewModel.selectedIndexInCarousel].contentId})?.contentId
-        viewModel.goContentPlayingState = isPlaying
+        viewModel.gpContentPlayingState = isPlaying
     }
     
     override init(frame: CGRect) {

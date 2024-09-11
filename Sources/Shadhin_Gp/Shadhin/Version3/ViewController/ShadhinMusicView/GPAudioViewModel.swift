@@ -23,7 +23,7 @@ class GPAudioViewModel {
     var whichIndexIsPlayingInTrending: Int?
     var trendingState: PlayingState = .neverPlayed
     var trendingSongInteractionContentId: Int?
-    var goContentPlayingState: PlayingState = .neverPlayed
+    var gpContentPlayingState: PlayingState = .neverPlayed
     
     var changeTitle: ()->Void = {}
     var changeAllButtonsToImageName: [(PlayingState, Int?)->Void] = []

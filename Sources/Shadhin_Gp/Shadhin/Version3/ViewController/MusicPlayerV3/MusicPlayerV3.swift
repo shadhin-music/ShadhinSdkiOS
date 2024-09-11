@@ -1206,6 +1206,7 @@ extension MusicPlayerV3: AudioPlayerDelegate {
                 popupbar.progress = 0
             }
             NotificationCenter.default.post(name: .MUSIC_PAUSE, object: nil)
+            GPAudioViewModel.shared.gpContentPlayingState = .pause
         }else if state == .buffering {
             //print("buffering")
             shouldRetryOnBuffering()
@@ -1234,6 +1235,7 @@ extension MusicPlayerV3: AudioPlayerDelegate {
             playPauseBtnMini?.setPlaying(true)
             NotificationCenter.default.post(name: .MUSIC_PLAY, object: nil)
             self.history_timer.invalidate()
+            GPAudioViewModel.shared.gpContentPlayingState = .playing
         }else if state == .paused {
             
             loader.stopAnimating()
@@ -1246,6 +1248,7 @@ extension MusicPlayerV3: AudioPlayerDelegate {
             
             ShadhinCore.instance.api.releaseServerLock()
             NotificationCenter.default.post(name: .MUSIC_PAUSE, object: nil)
+            GPAudioViewModel.shared.gpContentPlayingState = .pause
         }else if case .failed(let error) = state{
             //print("Look from -> Failed \(error)  \(error._code)")
             Log.error("Failed \(error) \(error._code)")
@@ -1395,7 +1398,7 @@ extension MusicPlayerV3{
         // MusicPlayerV3.shared.tabBar?.tabBar.isHidden = true
         popupbar.updateContent(content: content)
         
-        if GPAudioViewModel.shared.goContentPlayingState == .pause {
+        if GPAudioViewModel.shared.gpContentPlayingState == .pause {
             popupbar.playPauseBtn?.hideLoading()
             if let seekTo = GPAudioViewModel.shared.seekTo {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {

@@ -23,6 +23,7 @@ public class ShadhinMusicView: UIView {
     
     @IBOutlet weak var iCarouselLeftConst: NSLayoutConstraint!
     
+    @IBOutlet weak var trendingHitslbl: UILabel!
     @IBOutlet weak var blurImage: UIImageView!
     @IBOutlet weak var gpPlayerSlider: UISlider!
     @IBOutlet weak var playPauseButton: UIButton!
@@ -49,6 +50,7 @@ public class ShadhinMusicView: UIView {
         fetchDataFromGpExploreMusic()
         viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: isPlaying)
         seeAllBtn.setClickListener {
+            print("See ALL btn")
             self.clickListenerForMsisdn()
         }
         exploreMoreView.setClickListener {
@@ -58,6 +60,9 @@ public class ShadhinMusicView: UIView {
         viewModel.changeAllButtonsToImageName.append(setButtonImage)
         
         gradientSetup()
+        trendingHitslbl.setClickListener {
+            print("Trending hits ")
+        }
     }
     
     func gradientSetup(){

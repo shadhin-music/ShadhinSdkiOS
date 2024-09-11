@@ -21,10 +21,9 @@ public class ShadhinMusicView: UIView {
     
     let viewModel = GPAudioViewModel.shared
     
+    @IBOutlet weak var seeAllbtn: UIView!
     @IBOutlet weak var iCarouselLeftConst: NSLayoutConstraint!
     
-    @IBOutlet weak var seeAllbtn: UIStackView!
-    @IBOutlet weak var trendingHitslbl: UILabel!
     @IBOutlet weak var blurImage: UIImageView!
     @IBOutlet weak var gpPlayerSlider: UISlider!
     @IBOutlet weak var playPauseButton: UIButton!
@@ -60,9 +59,6 @@ public class ShadhinMusicView: UIView {
         viewModel.changeAllButtonsToImageName.append(setButtonImage)
         
         gradientSetup()
-        trendingHitslbl.setClickListener {
-            print("Trending hits ")
-        }
     }
     
     func gradientSetup(){
@@ -89,10 +85,6 @@ public class ShadhinMusicView: UIView {
         self.visualEffect.contentView.layer.insertSublayer(gradientLayer, at: 0)
         
     }
-//    @IBAction func seeAllAction(_ sender: Any) {
-//        print("See ALL btn")
-//        self.clickListenerForMsisdn()
-//    }
     
     func clickListenerForMsisdn() {
         if let accessToken = self.accessToken, let vc = self.vc {

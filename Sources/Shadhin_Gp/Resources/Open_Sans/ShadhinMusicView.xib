@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" customClass="ShadhinMusicView" customModule="Shadhin_Gp" customModuleProvider="target">
             <connections>
                 <outlet property="artistLbl" destination="CUe-ef-z5j" id="KoP-Fx-jBo"/>
-                <outlet property="blurImage" destination="dO0-XK-6wT" id="TVk-oP-JA0"/>
                 <outlet property="collectionView" destination="bOT-4U-vd8" id="Yj9-or-3LV"/>
                 <outlet property="exploreMoreView" destination="hYO-3d-W6P" id="fRy-lw-rQV"/>
                 <outlet property="gpCaroselMusicView" destination="fAF-P7-Hxx" id="W9t-Z0-VRV"/>
@@ -139,11 +138,6 @@
                                             <action selector="playerSliderAction:" destination="-1" eventType="valueChanged" id="iuC-nY-rXk"/>
                                         </connections>
                                     </slider>
-                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dO0-XK-6wT">
-                                        <rect key="frame" x="0.0" y="16" width="434" height="186.33333333333331"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1SJ-vT-Voi" secondAttribute="trailing" id="2ws-0R-UP4"/>
@@ -271,8 +265,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNC-9A-slw">
-                    <rect key="frame" x="0.0" y="20" width="100" height="40"/>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNC-9A-slw">
+                    <rect key="frame" x="0.0" y="20" width="402" height="40"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadhin_logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="Gbt-k1-FQE">
                             <rect key="frame" x="16" y="8" width="74" height="24"/>
@@ -294,13 +288,13 @@
                         <constraint firstItem="Gbt-k1-FQE" firstAttribute="leading" secondItem="bNC-9A-slw" secondAttribute="leading" constant="16" id="3Xj-51-c4C"/>
                         <constraint firstAttribute="height" constant="40" id="JYJ-FP-j2Z"/>
                         <constraint firstItem="GOH-Rh-eXF" firstAttribute="leading" secondItem="Gbt-k1-FQE" secondAttribute="trailing" id="Kyv-gv-nGX"/>
-                        <constraint firstAttribute="width" constant="100" id="P7r-RI-hvD"/>
                         <constraint firstItem="Gbt-k1-FQE" firstAttribute="centerY" secondItem="bNC-9A-slw" secondAttribute="centerY" id="oCX-BZ-w2m"/>
                         <constraint firstItem="GOH-Rh-eXF" firstAttribute="centerY" secondItem="bNC-9A-slw" secondAttribute="centerY" id="u4z-VU-U1A"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="bNC-9A-slw" secondAttribute="trailing" constant="16" id="97I-Ft-d7S"/>
                 <constraint firstAttribute="bottom" secondItem="mQp-hW-lfx" secondAttribute="bottom" id="RYv-Ql-sqe"/>
                 <constraint firstItem="mQp-hW-lfx" firstAttribute="top" secondItem="bNC-9A-slw" secondAttribute="bottom" constant="12" id="cPB-VR-uEp"/>
                 <constraint firstItem="bNC-9A-slw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fGi-ga-Gws"/>

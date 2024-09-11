@@ -37,12 +37,15 @@ class SubscriptionProcessVC: UIViewController,NIBVCProtocol {
     }
     
     func showSucces() {
-        GPSDKSubscription.getNewUserSubscriptionDetails {[weak self] isSubscribed in
-            guard let self = self else { return }
-            if isSubscribed {
-                self.confirmBtnLabelChange()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            GPSDKSubscription.getNewUserSubscriptionDetails {[weak self] isSubscribed in
+                guard let self = self else { return }
+                if isSubscribed {
+                    self.confirmBtnLabelChange()
+                }
             }
-        }
+        })
+        
     }
     
     func showFailed(message: String, okAction: @escaping () -> Void) {

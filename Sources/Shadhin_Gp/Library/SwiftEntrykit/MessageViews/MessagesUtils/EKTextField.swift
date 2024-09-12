@@ -83,6 +83,6 @@ final  class EKTextField: UIView {
         separatorView.backgroundColor = content.bottomBorderColor(for: traitCollection)
         imageView.tintColor = content.tintColor(for: traitCollection)
         textField.textColor = content.textStyle.color(for: traitCollection)
-        textField.placeholder = content.placeholder
+        textField.placeholderr = content.placeholder
     }
 }

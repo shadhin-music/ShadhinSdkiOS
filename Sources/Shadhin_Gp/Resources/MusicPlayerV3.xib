@@ -171,7 +171,7 @@
                                                     <action selector="songsDownloadAction:" destination="-1" eventType="touchDown" id="t9g-5t-LTo"/>
                                                 </connections>
                                             </button>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8a-XZ-70P" customClass="CircularProgress" customModule="Shadhin_Gp" >
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8a-XZ-70P" customClass="CircularProgress" customModule="Shadhin_Gp">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -388,7 +388,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qr-BX-21C">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Kdd-AH-aMp" customClass="PBPopupBarTitlesView" customModule="Shadhin_Gp" >
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Kdd-AH-aMp" customClass="PBPopupBarTitlesView" customModule="Shadhin_Gp">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UH-BC-DOj">
@@ -432,7 +432,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_download"/>
                                     </button>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JG-NO-L34" customClass="CircularProgress" customModule="Shadhin_Gp" >
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4JG-NO-L34" customClass="CircularProgress" customModule="Shadhin_Gp">
                                         <rect key="frame" x="0.0" y="7.6666666666667425" width="35" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="tintColor"/>

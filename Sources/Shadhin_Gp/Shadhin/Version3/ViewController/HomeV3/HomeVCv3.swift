@@ -11,7 +11,7 @@ import UIKit
 class HomeVCv3: UIViewController, NIBVCProtocol{
     
     @IBOutlet weak var proImg: UIImageView!
-    
+    var discoverModel: CommonContentProtocol!
     var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var profileButton : UIButton?
     @IBOutlet weak var searchButton : UIButton?
@@ -55,6 +55,7 @@ class HomeVCv3: UIViewController, NIBVCProtocol{
         
         if !viewModel.gpMusicContents.isEmpty && viewModel.gpContentPlayingState != .neverPlayed {
             MusicPlayerV3.shared.musicdata = viewModel.gpMusicContents.compactMap({$0.toCommonContentV4()})
+            MusicPlayerV3.shared.rootContent = viewModel.gpMusicContents.compactMap({$0.toCommonContentV4()}).first
             openGPMusicsInMiniPlayer()
         }
         AudioPlayer.shared.delegate = MusicPlayerV3.shared

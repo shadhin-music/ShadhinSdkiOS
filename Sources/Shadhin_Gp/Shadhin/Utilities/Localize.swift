@@ -51,15 +51,15 @@ extension String{
         case shareVideo
         case addToWatchLater
         case removeFromWatchLater
-        case removeFromDownload
+        case removeFromDownload = "Remove From Download"
         case download
         case removeFromHistory
         case gotoAlbum = "Go to Album"
         case gotoArtist = "Go to Artist"
         case addToPlaylist = "Add to Playlist"
         case remove
-        case connectedDevice
-        case queueList
+        case connectedDevice = "connected Device"
+        case queueList = "Queue List"
         case sleepTimer
         case sleep
     }

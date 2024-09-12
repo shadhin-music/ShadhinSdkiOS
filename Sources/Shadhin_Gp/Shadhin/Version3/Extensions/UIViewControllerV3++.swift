@@ -98,18 +98,17 @@ extension UIViewController{
         let content = viewModel.gpMusicContents[viewModel.selectedIndexInCarousel].toCommonContentV4()
         //var popVC = tabBarController?.popupContainerViewController as? MusicPlayerV3
         //if popVC == nil{
-            var popVC  = MusicPlayerV3.shared
+        let popVC  = MusicPlayerV3.shared
         //}
 //        guard let popVC = popVC else {
 //            return
 //        }
         
-        
         popVC.loadViewIfNeeded()
         popVC.songsIndex = GPAudioViewModel.shared.selectedIndexInCarousel
         popVC.musicdata = GPAudioViewModel.shared.gpMusicContents.compactMap({$0.toCommonContentV4()})
         //popVC.playlistId = playlistId
-        popVC.updateUI(withIndex: index)
+        //popVC.updateUI(withIndex: index)
         
         //execule till this for outside
         //popVC.rootContent = rootModel

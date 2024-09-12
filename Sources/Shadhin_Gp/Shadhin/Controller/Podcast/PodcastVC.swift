@@ -503,15 +503,15 @@ class PodcastVC: UITableViewController {
     
     func viewReply(_ comment : CommentsObj.Comment, _ index : IndexPath){
         
-        if !ShadhinCore.instance.isUserLoggedIn{
-            //    self.showNotUserPopUp(callingVC: self)
-            return
-        }
+//        if !ShadhinCore.instance.isUserLoggedIn{
+//            //    self.showNotUserPopUp(callingVC: self)
+//            return
+//        }
         
-        if ShadhinCore.instance.defaults.userName.isEmpty{
-            updateNameRequired()
-            return
-        }
+//        if ShadhinCore.instance.defaults.userName.isEmpty{
+//            updateNameRequired()
+//            return
+//        }
         
         if selectedEpisodeCommentPaid && !ShadhinCore.instance.isUserPro {
             self.goSubscriptionTypeVC()

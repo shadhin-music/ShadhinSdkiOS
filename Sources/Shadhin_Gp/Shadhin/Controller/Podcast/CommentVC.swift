@@ -182,16 +182,16 @@ extension CommentVC: UITableViewDelegate,UITableViewDataSource {
             cell.commentVC = self
             if comment == nil{
                 cell.commentTF.becomeFirstResponder()
-                cell.commentTF.text =  ""
+                cell.commentTF.placeholder =  "Add a comment"
             }else{
-                cell.commentTF.text = "Add a reply"
+                cell.commentTF.placeholder = "Add a reply"
             }
             return cell
         }else if indexPath.row == 1 && comment != nil{
             let cell = tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier, for: indexPath) as! CommentCell
             if let comment = self.comment{
                 if let userPicUrlEncoded = comment.userPic.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed){
-                    cell.userImg.kf.setImage(with: URL(string:userPicUrlEncoded ),placeholder: UIImage(named: "ic_user_1"))
+                    cell.userImg.kf.setImage(with: URL(string:userPicUrlEncoded ),placeholder: UIImage(named: "ic_user_1",in: Bundle.ShadhinMusicSdk,compatibleWith: nil))
                 }
                 if comment.adminUserType.isEmpty{
                     if comment.isSubscriber ?? false{
@@ -210,7 +210,7 @@ extension CommentVC: UITableViewDelegate,UITableViewDataSource {
                     }
                 }else{
                     let imageAttachment = NSTextAttachment()
-                    imageAttachment.image = UIImage(named:"verified_2")
+                    imageAttachment.image = UIImage(named:"verified_2",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
                     let imageOffsetY: CGFloat = -1.0
                     imageAttachment.bounds = CGRect(x: 0, y: imageOffsetY, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
                     let attachmentString = NSAttributedString(attachment: imageAttachment)
@@ -226,9 +226,9 @@ extension CommentVC: UITableViewDelegate,UITableViewDataSource {
                 cell.replyBtn.isHidden = true
                 
                 if comment.commentFavorite{
-                    cell.favImg.image = UIImage(named: "ic_mymusic_favorite")
+                    cell.favImg.image = UIImage(named: "ic_mymusic_favorite",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
                 }else{
-                    cell.favImg.image = UIImage(named: "ic_favorite_border")
+                    cell.favImg.image = UIImage(named: "ic_favorite_border",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
                 }
                 if comment.commentLike{
                     cell.likeBtn.setTitle("You liked", for: .normal)
@@ -269,7 +269,7 @@ extension CommentVC: UITableViewDelegate,UITableViewDataSource {
         
         if let reply = replies?.data[index]{
             cell.userImg.kf.indicatorType = .activity
-            cell.userImg.kf.setImage(with: URL(string: reply.userPic.safeUrl()),placeholder: UIImage(named: "ic_user_1"))
+            cell.userImg.kf.setImage(with: URL(string: reply.userPic.safeUrl()),placeholder: UIImage(named: "ic_user_1",in: Bundle.ShadhinMusicSdk,compatibleWith: nil))
             //cell.userName.text = reply.userName
             if reply.adminUserType.isEmpty{
                 if reply.isSubscriber ?? false{
@@ -288,7 +288,7 @@ extension CommentVC: UITableViewDelegate,UITableViewDataSource {
                 }
             }else{
                 let imageAttachment = NSTextAttachment()
-                imageAttachment.image = UIImage(named:"verified_2")
+                imageAttachment.image = UIImage(named:"verified_2",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
                 let imageOffsetY: CGFloat = -1.0
                 imageAttachment.bounds = CGRect(x: 0, y: imageOffsetY, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
                 let attachmentString = NSAttributedString(attachment: imageAttachment)
@@ -304,9 +304,9 @@ extension CommentVC: UITableViewDelegate,UITableViewDataSource {
             
             cell.favCount.text = "\(reply.totalReplyFavorite)"
             if reply.replyFavorite{
-                cell.favImg.image = UIImage(named: "ic_mymusic_favorite")
+                cell.favImg.image = UIImage(named: "ic_mymusic_favorite",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
             }else{
-                cell.favImg.image = UIImage(named: "ic_favorite_border")
+                cell.favImg.image = UIImage(named: "ic_favorite_border", in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
             }
             if reply.replyLike{
                 cell.likeBtn.setTitle("You liked", for: .normal)
@@ -419,7 +419,7 @@ extension CommentVC{
                     }else{
                         self.dismiss(animated: true) {
                             AlertSlideUp.show(
-                                image: #imageLiteral(resourceName: "ic_coupon_e.pdf"),
+                                image: UIImage(named: "ic_coupon_e", in:Bundle.ShadhinMusicSdk, compatibleWith: nil) ?? .init(),// #imageLiteral(resourceName: "ic_coupon_e.pdf"),
                                 tileString: "Sorry!",
                                 msgString: errorMsg ?? "Error occured",
                                 positiveString: nil,
@@ -494,7 +494,7 @@ extension CommentVC{
                     }
                     self.dismiss(animated: true) {
                         AlertSlideUp.show(
-                            image: #imageLiteral(resourceName: "ic_coupon_e.pdf"),
+                            image:UIImage(named: "ic_coupon_e", in: Bundle.ShadhinMusicSdk,compatibleWith: nil) ?? .init(),
                             tileString: "Sorry!",
                             msgString: errorMsg ?? "Error occured",
                             positiveString: nil,

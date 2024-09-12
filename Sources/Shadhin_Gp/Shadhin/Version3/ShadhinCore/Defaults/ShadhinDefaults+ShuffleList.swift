@@ -17,7 +17,7 @@ extension ShadhinDefaults {
         print(Array(ShadhinDefaults.shuffleItems))
         
         userDefault.set(Array(ShadhinDefaults.shuffleItems), forKey: "shuffleItems")
-        print(userDefault.stringArray(forKey: "shuffleItems"))
+      //  print(userDefault.stringArray(forKey: "shuffleItems"))
     }
     
     func checkShuffle(contentId: String, contentType: String)-> Bool {

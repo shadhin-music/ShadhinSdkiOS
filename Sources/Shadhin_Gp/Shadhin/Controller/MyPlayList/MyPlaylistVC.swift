@@ -153,10 +153,11 @@ class MyPlaylistVC: UIViewController,NIBVCProtocol {
             self.inTransition = true
             if self.axis == .vertical{
                 self.axis = .horizontal
-                self.layoutBtn.setImage(#imageLiteral(resourceName: "ic_grid_mode.pdf"), for: .normal)
+//                self.layoutBtn.setImage(#imageLiteral(resourceName: "ic_grid_mode.pdf"), for: .normal)
+                self.layoutBtn.setImage(UIImage(named: "ic_grid_mode",in: Bundle.ShadhinMusicSdk,compatibleWith: nil), for: .normal)
             }else{
                 self.axis = .vertical
-                self.layoutBtn.setImage(#imageLiteral(resourceName: "ic_list_mode.pdf"), for: .normal)
+                self.layoutBtn.setImage(UIImage(named: "ic_list_mode",in: Bundle.ShadhinMusicSdk,compatibleWith: nil), for: .normal)
             }
         }
         selectionModeBtn.setClickListener {

@@ -129,9 +129,9 @@ extension PodcastCommentVC : UITableViewDataSource, UITableViewDelegate, UIScrol
                     self.viewReply(comment, indexPath)
                 }
                 if comment.commentFavorite{
-                    cell.favImg.image = UIImage(named: "ic_mymusic_favorite")
+                    cell.favImg.image = UIImage(named: "ic_mymusic_favorite",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
                 }else{
-                    cell.favImg.image = UIImage(named: "ic_favorite_border")
+                    cell.favImg.image = UIImage(named: "ic_favorite_border",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
                 }
                 if comment.commentLike{
                     cell.likeBtn.setTitle("You liked", for: .normal)
@@ -192,11 +192,11 @@ extension PodcastCommentVC : UITableViewDataSource, UITableViewDelegate, UIScrol
     
     func viewReply(_ comment : CommentsObj.Comment, _ index : IndexPath){
         
-        if !ShadhinCore.instance.isUserLoggedIn{
-          //  self.showNotUserPopUp(callingVC: self)
-            return
-        }
-        if ShadhinCore.instance.defaults.userName.isEmpty{
+//        if !ShadhinCore.instance.isUserLoggedIn{
+//          //  self.showNotUserPopUp(callingVC: self)
+//            return
+//        }
+        if ShadhinCore.instance.defaults.userIdentity.isEmpty{
             AlertSlideUp.show(
                // image:#imageLiteral(resourceName: "user icon 1.pdf"),
                 image:UIImage(named: "user icon 1", in: Bundle.ShadhinMusicSdk, with: nil) ?? .init(),

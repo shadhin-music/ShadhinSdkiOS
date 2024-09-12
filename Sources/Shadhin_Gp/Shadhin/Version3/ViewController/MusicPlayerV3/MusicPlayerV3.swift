@@ -193,7 +193,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
             return
         }
         
-        var content = CommonContent_V0()
+        let content = CommonContent_V0()
         //        content.contentID = "0000"
         //        content.contentType = "s"
         //        content.image = imageUrl.absoluteString

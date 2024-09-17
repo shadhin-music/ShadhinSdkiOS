@@ -22,6 +22,7 @@ class SqrPagerWithDescBelow: UICollectionViewCell {
         let w = SCREEN_WIDTH - 32
         return w + 40 + 28 + 60 + 8
     }
+    private var content: CommonContentProtocol?
     @IBOutlet weak var seeAllButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
     
@@ -43,6 +44,7 @@ class SqrPagerWithDescBelow: UICollectionViewCell {
     private var dataSource : [CommonContentProtocol] = []
     var onItemClick : (CommonContentProtocol)->Void = {_ in}
     var seeAllClick : ()-> Void = { }
+    var onPlaySong : ((CommonContentProtocol)-> Bool)?
     
     override func prepareForReuse() {
     }
@@ -63,8 +65,31 @@ class SqrPagerWithDescBelow: UICollectionViewCell {
         pagerView.delegate = self
         pagerView.isInfinite = true
         pagerView.cornerRadius = 16
+        playButton.setImage(UIImage(named: "play",in:Bundle.ShadhinMusicSdk,with: nil), for: .normal)
+        playButton.setImage(UIImage(named: "pause",in: Bundle.ShadhinMusicSdk,with: nil), for: .selected)
+        NotificationCenter.default.addObserver(self, selector: #selector(musicPlay), name: .MUSIC_PLAY, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(musicPause), name: .MUSIC_PAUSE, object: nil)
         
     }
+    
+    @objc
+    func musicPlay(){
+        if MusicPlayerV3.audioPlayer.state == .playing{
+            if MusicPlayerV3.audioPlayer.currentItem?.contentData?.getRoot() == self.content?.getRoot(){
+                // pause icon
+                playButton.isSelected = true
+            }else{
+                //play icon
+                playButton.isSelected = false
+                
+            }
+        }
+    }
+    @objc
+    func musicPause(){
+        playButton.isSelected = false
+    }
+    
     func bind(with data : [CommonContentProtocol]){
         self.dataSource = data
         if dataSource.isEmpty {
@@ -83,6 +108,22 @@ class SqrPagerWithDescBelow: UICollectionViewCell {
     }
     
     @IBAction func onPlayPressed(_ sender: Any) {
+        guard let pp = onPlaySong, let content = content, let contentType = content.contentType,let cType = SMContentType(rawValue: contentType), cType == .song else {return}
+        let playerRoot = MusicPlayerV3.audioPlayer.currentItem?.contentData?.getRoot()
+        if playerRoot == content.getRoot(){
+            // pause icon
+            if MusicPlayerV3.isAudioPlaying{
+                playButton.isSelected = false
+                MusicPlayerV3.audioPlayer.pause()
+            }else{
+                playButton.isSelected = true
+                MusicPlayerV3.audioPlayer.resume()
+            }
+        }else{
+            //play icon
+            playButton.isSelected = pp(content)
+            
+        }
         
     }
     @IBAction func onRightButtonPressed(_ sender: Any) {

@@ -196,7 +196,7 @@ extension CommentVC: UITableViewDelegate,UITableViewDataSource {
                 if comment.adminUserType.isEmpty{
                     if comment.isSubscriber ?? false{
                         let imageAttachment = NSTextAttachment()
-                        imageAttachment.image = #imageLiteral(resourceName: "ic_verified_user.pdf")
+                        imageAttachment.image = UIImage(named: "ic_verified_user",in: Bundle.ShadhinMusicSdk,compatibleWith: nil) //#imageLiteral(resourceName: "ic_verified_user.pdf")
                         let imageOffsetY: CGFloat = -1.0
                         imageAttachment.bounds = CGRect(x: 0, y: imageOffsetY, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
                         let attachmentString = NSAttributedString(attachment: imageAttachment)

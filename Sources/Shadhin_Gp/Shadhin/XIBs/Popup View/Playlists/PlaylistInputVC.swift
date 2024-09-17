@@ -11,7 +11,7 @@ import UIKit
 
 typealias PlaylistCreateCompleted = ()->()
 
-class PlaylistInputVC: UIViewController {
+class PlaylistInputVC: UIViewController,NIBVCProtocol {
 
     @IBOutlet weak var playlistTxtFld: UITextField!
     var playlistCreateCompleted: PlaylistCreateCompleted?

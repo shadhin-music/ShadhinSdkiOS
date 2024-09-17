@@ -135,7 +135,7 @@ class MyPlaylistVC: UIViewController,NIBVCProtocol {
     }
     
     private func createPlaylistAction() {
-        let vc = PlaylistInputVC()
+        let vc = PlaylistInputVC.instantiateNib()
         let height : CGFloat = 205
         SwiftEntryKit.display(entry: vc, using: SwiftEntryKitAttributes.bottomAlertAttributes(viewHeight: height))
         vc.didPlaylistCreateCompleted {

@@ -1,0 +1,26 @@
+./unused_assets.txt:./Home/ai_ic.imageset/icon.png
+./unused_assets.txt:./Home/progressImg.imageset/AI playlist anim 1.png
+./unused_assets.txt:./Home/rewind.imageset/rewind.png
+./unused_assets.txt:./Home/winAndStreamBG.imageset/2024-07-07 16.05.55.jpg
+./unused_assets.txt:./Leaderboard/avatar-filled.imageset/avatar-filled.png
+./unused_assets.txt:./Leaderboard/leaderboardTopBG.imageset/header.png
+./unused_assets.txt:./LoginSystemV3/reset_password.imageset/reset password.png
+./unused_assets.txt:./MusicV4/moreMenuV4BG.imageset/moreMenuV4BG.png
+./unused_assets.txt:./NewSearch/dot_ic.imageset/Icon.png
+./unused_assets.txt:./PopUp/noInternet.imageset/internet connection.png
+./unused_assets.txt:./PopUp/noInternet.imageset/internet connection@2x.png
+./unused_assets.txt:./PopUp/noInternet.imageset/internet connection@3x.png
+./unused_assets.txt:./Rewind/rewindMute.imageset/rewindMute.png
+./unused_assets.txt:./Rewind/rewindPause.imageset/rewindPause.png
+./unused_assets.txt:./Rewind/rewindPlay.imageset/rewindPlay.png
+./unused_assets.txt:./Rewind/rewindSound.imageset/sound.png
+./unused_assets.txt:./Subscription/stripe.imageset/atm-card.png
+./unused_assets.txt:./Telco/airtel.imageset/Rectangle 338.png
+./unused_assets.txt:./Telco/airtel.imageset/Rectangle 338@2x.png
+./unused_assets.txt:./Telco/airtel.imageset/Rectangle 338@3x.png
+./unused_assets.txt:./Telco/ic_gp.imageset/ic_gp.png
+./unused_assets.txt:./Telco/nagad.imageset/ic_nagad.png
+./unused_assets.txt:./Telco/robi.imageset/ic_robi_airtel.png
+./unused_assets.txt:./Telco/robiLogo.imageset/Rectangle 337.png
+./unused_assets.txt:./Telco/robiLogo.imageset/Rectangle 337@2x.png
+./unused_assets.txt:./Telco/robiLogo.imageset/Rectangle 337@3x.png

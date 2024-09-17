@@ -60,10 +60,10 @@ class MyPlaylistCell: UICollectionViewCell {
             }
         } else {
             aiImageViewForList.isHidden = true
-            img[0].image = UIImage(named: "default_song")
-            img[1].image = UIImage(named: "default_song")
-            img[2].image = UIImage(named: "default_song")
-            img[3].image = UIImage(named: "default_song")
+            img[0].image = UIImage(named: "default_song", in: Bundle.ShadhinMusicSdk,with: nil)
+            img[1].image = UIImage(named: "default_song", in: Bundle.ShadhinMusicSdk,with: nil)
+            img[2].image = UIImage(named: "default_song", in: Bundle.ShadhinMusicSdk,with: nil)
+            img[3].image = UIImage(named: "default_song", in: Bundle.ShadhinMusicSdk,with: nil)
             if let array = model.Data{
                 for (i , item) in array.enumerated(){
                     if i > 3 {
@@ -71,7 +71,7 @@ class MyPlaylistCell: UICollectionViewCell {
                     }
                     let imgUrl = item.image.replacingOccurrences(of: "<$size$>", with: "300")
                     img[i].kf.indicatorType = .activity
-                    img[i].kf.setImage(with: URL(string: imgUrl.safeUrl()),placeholder: UIImage(named: "default_song"))
+                    img[i].kf.setImage(with: URL(string: imgUrl.safeUrl()),placeholder: UIImage(named: "default_song", in: Bundle.ShadhinMusicSdk,with: nil))
                 }
             }
         }
@@ -122,9 +122,9 @@ class MyPlaylistCell: UICollectionViewCell {
         if isSelectMood{
             selectedBtn.isHidden = false
             if playList.isSelect{
-                selectedBtn.setImage(#imageLiteral(resourceName: "ic_artist_check.pdf"), for: .normal)
+                selectedBtn.setImage(UIImage(named: "ic_artist_check", in: Bundle.ShadhinMusicSdk,with: nil), for: .normal) //setImage(#imageLiteral(resourceName: "ic_artist_check.pdf"), for: .normal)
             }else{
-                selectedBtn.setImage(#imageLiteral(resourceName: "ic_artist_uncheck.pdf"), for: .normal)
+                selectedBtn.setImage(UIImage(named: "ic_artist_uncheck", in: Bundle.ShadhinMusicSdk,with: nil))//setImage(#imageLiteral(resourceName: "ic_artist_uncheck.pdf"), for: .normal)
             }
         }else{
             selectedBtn.isHidden = true

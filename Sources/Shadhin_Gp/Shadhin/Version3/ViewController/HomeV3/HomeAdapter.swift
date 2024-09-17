@@ -3,7 +3,7 @@
 //  Shadhin
 //
 //  Created by Joy on 10/10/22.
-//  Copyright © 2022 Cloud 7 Limited. All rights reserved.
+//  Copyright © 2022 Cloud 7 Limited. All rights reserr.
 //
 
 import UIKit
@@ -60,6 +60,7 @@ class HomeAdapter: NSObject {
     private var delegate : HomeAdapterProtocol
     private var dataSource : [HomePatch] = []
     var aiPlaylists: [NewContent]?
+    private var weekTenDataSourse : [CommonContentProtocol] = []
     private var recentPlayList : [CommonContentProtocol] {
         do{
             return try RecentlyPlayedDatabase.instance.getDataFromDatabase(fetchLimit: 10)
@@ -263,7 +264,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             }
             return cell
         case .TWO_ROW_SQR_WITH_DESC_BELOW:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowSqrWithDescBelow.identifier, for: indexPath) as? TwoRowSqrWithDescBelow else{
+guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowSqrWithDescBelow.identifier, for: indexPath) as? TwoRowSqrWithDescBelow else{
                 fatalError()
             }
             cell.bind(with: obj.title ?? "", dataSource: obj.contents)

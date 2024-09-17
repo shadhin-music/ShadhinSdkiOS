@@ -31,7 +31,7 @@ class VGPlayerUtils: NSObject {
     
    static  func imageResource(_ name: String) -> UIImage? {
         let bundle = playerBundle()
-        return UIImage(named: name, in: bundle, compatibleWith: nil)
+       return UIImage(named: name, in:bundle, compatibleWith: nil)
     }
     
    static func imageSize(image: UIImage, scaledToSize newSize: CGSize) -> UIImage? {

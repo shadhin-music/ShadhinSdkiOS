@@ -255,7 +255,7 @@ extension ShadhinApi{
         }
     }
     
-    func getConcertEventsDetails(
+    /* func getConcertEventsDetails(
         _ completion : @escaping (_ eventData: ConcertEventObj?)->Void){
         AF.request(
             CONCERT_TICKET_DETAILS,
@@ -272,6 +272,7 @@ extension ShadhinApi{
             }
         }
     }
+    */
     
     func getConcertTicketPurchaseUrl(
         campaignID    : Int = 1,

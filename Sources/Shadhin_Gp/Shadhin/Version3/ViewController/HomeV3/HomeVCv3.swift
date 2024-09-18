@@ -361,9 +361,9 @@ extension HomeVCv3 : HomeVMProtocol{
         adapter.addStreamNwin(stream: data)
     }
     
-    func concertData(data: ConcertEventObj) {
-        adapter.addTicket(ticket: data)
-    }
+//    func concertData(data: ConcertEventObj) {
+//        adapter.addTicket(ticket: data)
+//    }
     
     func loading(isLoading: Bool, page: Int) {
         if page != 1{

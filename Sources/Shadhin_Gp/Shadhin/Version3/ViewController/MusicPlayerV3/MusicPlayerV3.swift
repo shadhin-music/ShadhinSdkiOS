@@ -187,7 +187,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
     var isChorkiAdIsPlaying = false
     
     
-    private func playChorkiAudioAd(){
+    /* private func playChorkiAudioAd(){
         guard let url = Bundle.main.url(forResource: "ad_file", withExtension: "mp3") else {
             print("url not found")
             return
@@ -251,7 +251,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
         //            self.isChorkiAdIsPlaying = false
         //            self.audioResume()
         //        })
-    }
+    } */
     
     
     override func viewDidLoad() {

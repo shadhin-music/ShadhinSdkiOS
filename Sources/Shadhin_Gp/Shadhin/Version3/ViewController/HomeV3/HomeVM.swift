@@ -12,7 +12,7 @@ protocol HomeVMProtocol : NSObjectProtocol {
     func handleAIPlaylists(aiPlaylists: [NewContent]?)
     func loading(isLoading: Bool, page: Int)
     func streamNwin(data : StreamNwinCampaignResponse)
-    func concertData(data : ConcertEventObj)
+  //  func concertData(data : ConcertEventObj)
     func rewindData(patches : [HomePatch], rewind : [TopStreammingElementModel])
     func refreshHome()
 }
@@ -22,7 +22,7 @@ class HomeVM: NSObject {
     private var totalPage = 2
     private var isLoading = false
     private var streamNwinCampaignResponse : StreamNwinCampaignResponse?
-    private var concertEventObj : ConcertEventObj?
+ //   private var concertEventObj : ConcertEventObj?
     private var aiPlaylists: [NewContent]?
     
     init(presenter: HomeVMProtocol? = nil) {
@@ -33,7 +33,7 @@ class HomeVM: NSObject {
         totalPage = 2
         isLoading = false
         streamNwinCampaignResponse = nil
-        concertEventObj = nil
+      //  concertEventObj = nil
         loadHomeContent()
         loadRecomanded()
     }
@@ -45,10 +45,10 @@ extension HomeVM{
         self.isLoading.toggle()
         presenter?.loading(isLoading: self.isLoading, page: currentPage)
         getHomeContent(by: currentPage)
-        if currentPage == 1{
-            checkIfCampaignRunning()
-            getRewind()
-        }
+//        if currentPage == 1{
+//            checkIfCampaignRunning()
+//            getRewind()
+//        }
     }
     
     private func getHomeContent(by page: Int){
@@ -94,17 +94,17 @@ extension HomeVM{
             self.presenter?.handle(patches: patches)
         }
     }
-    private func checkIfCampaignRunning(){
-        ShadhinCore.instance.api.getRunningCampaigns {
-            campaigns in
-            if campaigns.contains("MusicLiveEvent"){
-                self.getConcertData()
-            }
-            if campaigns.contains("Stream_And_Win"){
-                self.getStreamAndWinData()
-            }
-        }
-    }
+//    private func checkIfCampaignRunning(){
+//        ShadhinCore.instance.api.getRunningCampaigns {
+//            campaigns in
+//            if campaigns.contains("MusicLiveEvent"){
+//                self.getConcertData()
+//            }
+//            if campaigns.contains("Stream_And_Win"){
+//                self.getStreamAndWinData()
+//            }
+//        }
+//    }
     
     private func getStreamAndWinData(){
         if self.streamNwinCampaignResponse != nil{
@@ -123,18 +123,18 @@ extension HomeVM{
             }
         }
     }
-    private func getConcertData(){
-        if self.concertEventObj != nil{
-            insertConcertTicket()
-            return
-        }
-        ShadhinCore.instance.api.getConcertEventsDetails { _eventData in
-            guard let eventData = _eventData else {return}
-            self.concertEventObj = eventData
-            self.presenter?.concertData(data: eventData)
-            self.insertConcertTicket()
-        }
-    }
+//    private func getConcertData(){
+//        if self.concertEventObj != nil{
+//            insertConcertTicket()
+//            return
+//        }
+//        ShadhinCore.instance.api.getConcertEventsDetails { _eventData in
+//            guard let eventData = _eventData else {return}
+//            self.concertEventObj = eventData
+//            self.presenter?.concertData(data: eventData)
+//            self.insertConcertTicket()
+//        }
+//    }
     
     private func insertConcertTicket(){
         let content = Content(contentID: "-1",contentType: "R", image: "")

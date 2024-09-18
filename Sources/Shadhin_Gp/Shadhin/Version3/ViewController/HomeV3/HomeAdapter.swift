@@ -75,7 +75,7 @@ class HomeAdapter: NSObject {
     }
     
     private var streamNwinCampaignResponse : StreamNwinCampaignResponse?
-    private var concertEventObj : ConcertEventObj?
+  //  private var concertEventObj : ConcertEventObj?
     private var rewindData : [TopStreammingElementModel] = []
     
     var lastContentOffset = SCREEN_SAFE_TOP + 56
@@ -97,9 +97,9 @@ class HomeAdapter: NSObject {
     func addStreamNwin(stream : StreamNwinCampaignResponse){
         self.streamNwinCampaignResponse = stream
     }
-    func addTicket(ticket : ConcertEventObj){
-        self.concertEventObj = ticket
-    }
+//    func addTicket(ticket : ConcertEventObj){
+//        self.concertEventObj = ticket
+//    }
     func addRewind(rewind : [TopStreammingElementModel]){
         self.rewindData = rewind
     }

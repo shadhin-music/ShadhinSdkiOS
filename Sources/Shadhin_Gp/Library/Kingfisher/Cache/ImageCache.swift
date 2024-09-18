@@ -694,24 +694,27 @@ extension Data: DataTransformable {
     /// Clears the expired images from disk storage when app is in background. This is an async operation.
     /// In most cases, you should not call this method explicitly.
     /// It will be called automatically when `UIApplicationDidEnterBackgroundNotification` received.
-    @objc  func backgroundCleanExpiredDiskCache() {
-        // if 'sharedApplication()' is unavailable, then return
-        guard let sharedApplication = KingfisherWrapper<UIApplication>.shared else { return }
+     @objc func backgroundCleanExpiredDiskCache() {
+         // If 'sharedApplication()' is unavailable, then return
+         guard let sharedApplication = KingfisherWrapper<UIApplication>.shared else { return }
 
-        func endBackgroundTask(_ task: inout UIBackgroundTaskIdentifier) {
-            sharedApplication.endBackgroundTask(task)
-            task = UIBackgroundTaskIdentifier.invalid
-        }
-        
-        var backgroundTask: UIBackgroundTaskIdentifier!
-        backgroundTask = sharedApplication.beginBackgroundTask {
-            endBackgroundTask(&backgroundTask!)
-        }
-        
-        cleanExpiredDiskCache {
-            endBackgroundTask(&backgroundTask!)
-        }
-    }
+         func endBackgroundTask(_ task: inout UIBackgroundTaskIdentifier) {
+             sharedApplication.endBackgroundTask(task)
+             task = UIBackgroundTaskIdentifier.invalid
+         }
+         
+         var backgroundTask: UIBackgroundTaskIdentifier = .invalid
+
+         // Explicitly call the correct version of beginBackgroundTask
+         backgroundTask = sharedApplication.beginBackgroundTask(withName: "com.yourapp.cleanup") {
+             endBackgroundTask(&backgroundTask)
+         }
+         
+         cleanExpiredDiskCache {
+             endBackgroundTask(&backgroundTask)
+         }
+     }
+
 #endif
 
     // MARK: Image Cache State

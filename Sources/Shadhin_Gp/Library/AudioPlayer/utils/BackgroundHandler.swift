@@ -35,7 +35,12 @@ protocol BackgroundTaskCreator: AnyObject {
         func endBackgroundTask(_ identifier: UIBackgroundTaskIdentifier)
     }
 
-    extension UIApplication: BackgroundTaskCreator {}
+extension UIApplication: BackgroundTaskCreator {
+    func beginBackgroundTask(expirationHandler handler: (() -> Void)?) -> UIBackgroundTaskIdentifier {
+        return self.beginBackgroundTask(withName: nil, expirationHandler: handler)
+    }
+    
+}
 #endif
 
 /// A `BackgroundHandler` handles background.

@@ -48,12 +48,12 @@ extension String{
         case removeFromFavorite
         case addToFavorite = "Add to Favorite"
         case share
-        case shareVideo
+        case shareVideo = "Share Video"
         case addToWatchLater
         case removeFromWatchLater
         case removeFromDownload = "Remove From Download"
         case download
-        case removeFromHistory
+        case removeFromHistory = "Remove From History"
         case gotoAlbum = "Go to Album"
         case gotoArtist = "Go to Artist"
         case addToPlaylist = "Add to Playlist"

@@ -52,13 +52,12 @@ class HomeVCv3: UIViewController, NIBVCProtocol{
     
     func checkAndSetupGPAudioPlayer() {
         let viewModel = GPAudioViewModel.shared
-        
+        AudioPlayer.shared.delegate = MusicPlayerV3.shared
         if !viewModel.gpMusicContents.isEmpty && viewModel.gpContentPlayingState != .neverPlayed {
             MusicPlayerV3.shared.musicdata = viewModel.gpMusicContents.compactMap({$0.toCommonContentV4()})
             MusicPlayerV3.shared.rootContent = viewModel.gpMusicContents.compactMap({$0.toCommonContentV4()}).first
             openGPMusicsInMiniPlayer()
         }
-        AudioPlayer.shared.delegate = MusicPlayerV3.shared
     }
     
     func setProfileImage() {

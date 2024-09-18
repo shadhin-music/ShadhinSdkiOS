@@ -133,6 +133,7 @@ extension UIViewController{
         self.tabBarController?.presentPopupBar(withPopupContentViewController: popVC, animated: true, completion: nil)
         //popVC.viewDidLoad()
         popVC.iCarouselView.scrollToItem(at: index, animated: false)
+        popVC.iCarouselView.scrollToItem(at: index, animated: false)
         popVC.updateMiniPlayerInfo(content: content, tabBar: self.tabBarController)
         
         

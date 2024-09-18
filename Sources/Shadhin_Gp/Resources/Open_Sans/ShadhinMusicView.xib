@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -76,18 +76,18 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pym-Gc-0dI">
-                                                <rect key="frame" x="242" y="0.0" width="112" height="32"/>
+                                                <rect key="frame" x="250" y="0.0" width="104" height="32"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gn-mC-L6C">
-                                                        <rect key="frame" x="0.0" y="4" width="24" height="24"/>
+                                                        <rect key="frame" x="0.0" y="5" width="20" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="backward"/>
+                                                        <state key="normal" image="backward 1"/>
                                                         <connections>
                                                             <action selector="previousTapped:" destination="-1" eventType="touchUpInside" id="BX3-es-TTl"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-d2-nL3">
-                                                        <rect key="frame" x="40" y="0.0" width="32" height="32"/>
+                                                        <rect key="frame" x="36" y="0.0" width="32" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="32" id="Gr0-cU-roP"/>
                                                             <constraint firstAttribute="width" constant="32" id="NKX-Ed-0W1"/>
@@ -99,9 +99,9 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc2-3o-SbM">
-                                                        <rect key="frame" x="88" y="4" width="24" height="24"/>
+                                                        <rect key="frame" x="84" y="5" width="20" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="forward"/>
+                                                        <state key="normal" image="forward 1"/>
                                                         <connections>
                                                             <action selector="nextTapped:" destination="-1" eventType="touchUpInside" id="0h5-ms-Kbg"/>
                                                         </connections>
@@ -309,8 +309,8 @@
         </view>
     </objects>
     <resources>
-        <image name="backward" width="24" height="24"/>
-        <image name="forward" width="24" height="24"/>
+        <image name="backward 1" width="24" height="24"/>
+        <image name="forward 1" width="24" height="24"/>
         <image name="ic_see_all_arrow 1" width="21" height="20"/>
         <image name="music_ic" width="21" height="20"/>
         <image name="play_pause" width="24" height="24"/>

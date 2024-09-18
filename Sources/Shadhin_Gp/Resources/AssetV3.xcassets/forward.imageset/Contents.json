@@ -3,16 +3,6 @@
     {
       "filename" : "forward.svg",
       "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "next.svg",
-      "idiom" : "universal"
     }
   ],
   "info" : {

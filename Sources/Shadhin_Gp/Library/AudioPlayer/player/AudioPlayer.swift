@@ -152,6 +152,9 @@ public class AudioPlayer: NSObject {
         if let url = item.urlKey {
             urlKey = url
         }
+        if let podcastShow = item.podcastShowCode {
+            podcastShowCode = podcastShow
+        }
         
         print(item, "ITEM")
         
@@ -170,7 +173,7 @@ public class AudioPlayer: NSObject {
                   self.currentItem?.contentId == item.contentId else {
                 if(playUrl == nil){
                     self.getPlayUrlRetry(item.contentType!,
-                                    item.podcastShowCode!,
+                                    podcastShowCode,
                                     item.trackType!,
                                     item.urlKey!)
                 }

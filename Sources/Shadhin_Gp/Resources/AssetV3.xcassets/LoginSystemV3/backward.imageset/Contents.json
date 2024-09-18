@@ -3,16 +3,6 @@
     {
       "filename" : "backward.svg",
       "idiom" : "universal"
-    },
-    {
-      "appearances" : [
-        {
-          "appearance" : "luminosity",
-          "value" : "dark"
-        }
-      ],
-      "filename" : "previous.svg",
-      "idiom" : "universal"
     }
   ],
   "info" : {

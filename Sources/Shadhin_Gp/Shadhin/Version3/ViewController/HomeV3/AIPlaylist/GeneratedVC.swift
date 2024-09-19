@@ -28,7 +28,7 @@ class GeneratedVC: UIViewController,NIBVCProtocol {
             progressLbl.textColor = .white
         } else {
             generateImgView.backgroundColor = UIColor.white
-            progressView.backgroundColor = UIColor(named: "procressViewBgWhite")
+            progressView.backgroundColor = UIColor(named: "procressViewBgWhite",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
            // progressView.backgroundColor = UIColor.procressViewBgWhite
         }
     }

@@ -125,7 +125,7 @@ enum AppImage : String {
         //nameLabel.backgroundColor = .lightGray
         nameLabel.textColor = .primaryLableColor()
         nameLabel.font = UIFont.boldSystemFont(ofSize: 10)
-     //   nameLabel.text = "\(AudioPlayer.shared.rate)"
+        nameLabel.text = "\(AudioPlayer.shared.rate)"
         UIGraphicsBeginImageContext(frame.size)
         if let currentContext = UIGraphicsGetCurrentContext() {
             nameLabel.layer.render(in: currentContext)

@@ -251,7 +251,7 @@ extension PlaylistSongsVC: UITableViewDelegate,UITableViewDataSource {
                 MusicPlayerV3.isAudioPlaying.toggle()
             }
             cell.shareBtn.setClickListener {
-             //   self.shareMyPlaylist()
+                DeepLinks.createLinkTest(controller: self)
             }
             return cell
         case 2:
@@ -310,7 +310,7 @@ extension PlaylistSongsVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return 408
+            return 380
         case 2:
             return 165
         default:

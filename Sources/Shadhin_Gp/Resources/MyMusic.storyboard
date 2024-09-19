@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I99-RS-ug5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I99-RS-ug5">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -127,15 +127,15 @@
                                                                             </connections>
                                                                         </button>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-T3-IOb">
-                                                                            <rect key="frame" x="16" y="8" width="180" height="54"/>
+                                                                            <rect key="frame" x="16" y="9" width="180" height="52"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPGRADE TO PRO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRH-BH-i8V">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="27"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="26"/>
                                                                                     <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="15"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad-free, unlimited offline downloads and create playlist" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApZ-Cf-JjB">
-                                                                                    <rect key="frame" x="0.0" y="27" width="180" height="27"/>
+                                                                                    <rect key="frame" x="0.0" y="26" width="180" height="26"/>
                                                                                     <fontDescription key="fontDescription" name="ProductSans-Light" family="Product Sans Light" pointSize="11"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
@@ -1001,17 +1001,17 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="205"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4rx-Gb-hIN">
-                                                            <rect key="frame" x="29.5" y="36.5" width="261.5" height="132.5"/>
+                                                            <rect key="frame" x="42" y="38" width="236" height="129"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nosong" translatesAutoresizingMaskIntoConstraints="NO" id="uB1-v9-hEv">
-                                                                    <rect key="frame" x="80.5" y="0.0" width="100" height="100"/>
+                                                                    <rect key="frame" x="68" y="0.0" width="100" height="100"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="100" id="GES-U7-gp0"/>
                                                                         <constraint firstAttribute="width" constant="100" id="O6o-l9-B0M"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't played any song yet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW4-p2-nyc">
-                                                                    <rect key="frame" x="0.0" y="110" width="261.5" height="22.5"/>
+                                                                    <rect key="frame" x="0.0" y="110" width="236" height="19"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -3020,7 +3020,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3E-Wx-WFR">
-                                <rect key="frame" x="48" y="181" width="279" height="305"/>
+                                <rect key="frame" x="48" y="182.5" width="279" height="302"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cashback" translatesAutoresizingMaskIntoConstraints="NO" id="S9G-pd-IlX">
                                         <rect key="frame" x="107.5" y="32" width="64" height="64"/>
@@ -3035,21 +3035,21 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Enter your bKash number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alv-G8-6VA">
-                                        <rect key="frame" x="10" y="134" width="259" height="17"/>
+                                        <rect key="frame" x="10" y="134" width="259" height="14"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-c0-zeG">
-                                        <rect key="frame" x="16" y="163" width="247" height="38"/>
+                                        <rect key="frame" x="16" y="160" width="247" height="38"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="bKash Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GGd-s3-ywW">
-                                                <rect key="frame" x="57" y="0.0" width="190" height="38"/>
+                                                <rect key="frame" x="56" y="0.0" width="191" height="38"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="   +880" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kl-8Q-wM4">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="38"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -3073,7 +3073,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ig-5B-vZo">
-                                        <rect key="frame" x="20" y="217" width="239" height="32"/>
+                                        <rect key="frame" x="20" y="214" width="239" height="32"/>
                                         <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="0.70078675180000005" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="xxf-yI-Jqe"/>
@@ -3089,7 +3089,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI5-Hu-iav">
-                                        <rect key="frame" x="20" y="257" width="239" height="32"/>
+                                        <rect key="frame" x="20" y="254" width="239" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="lfh-d3-4Av"/>
                                         </constraints>
@@ -3486,25 +3486,25 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

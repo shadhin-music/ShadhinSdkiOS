@@ -174,8 +174,8 @@ public class AudioPlayer: NSObject {
                 if(playUrl == nil){
                     self.getPlayUrlRetry(item.contentType!,
                                     podcastShowCode,
-                                    item.trackType!,
-                                    item.urlKey!)
+                                    trackType,
+                                    urlKey)
                 }
                 return
             }

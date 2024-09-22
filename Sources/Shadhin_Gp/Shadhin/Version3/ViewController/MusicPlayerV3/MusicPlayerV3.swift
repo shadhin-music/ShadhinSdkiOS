@@ -163,7 +163,6 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
     
     @IBOutlet weak var topSpacing: NSLayoutConstraint!
     
-    @IBOutlet weak var routePickerView: AVRoutePickerView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -302,8 +301,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
         playPauseBtn.setImage(UIImage(named: "music_v4/ic_play",in: Bundle.ShadhinMusicSdk,compatibleWith: nil), for: .normal)
         playPauseBtn.setImage(UIImage(named: "music_v4/ic_pause",in: Bundle.ShadhinMusicSdk,compatibleWith: nil), for: .selected)
         
-        routePickerView.tintColor =  UIColor(red: 0.41, green: 0.42, blue: 0.44, alpha: 1.00)
-        routePickerView.delegate = self
+
         
         iCarouselView.type = .custom
         iCarouselView.contentMode = .scaleToFill
@@ -1538,7 +1536,7 @@ extension MusicPlayerV3 : MoreMenuDelegate{
     }
     
     func onAirplay() {
-        routePickerView.present()
+        
     }
     
     func openSleepTimer() {

@@ -124,11 +124,6 @@ extension PodcastVC{
                 #endif
                 
                 if track.isPaid ?? false && !ShadhinCore.instance.isUserPro {
-//                    if !ShadhinCore.instance.isUserLoggedIn{
-//                        self.showNotUserPopUp(callingVC: self)
-//                        return
-//                    }
-                    //self.goSubscriptionTypeVC()
                     NavigationHelper.shared.navigateToSubscription(from: self)
                     return
                 }

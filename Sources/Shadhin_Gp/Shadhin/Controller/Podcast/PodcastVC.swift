@@ -438,7 +438,7 @@ class PodcastVC: UITableViewController {
         
         setHeaderData(index)
         
-        openMusicPlayerV3(musicData: trackArray, songIndex: index, isRadio: false, rootModel: trackArray[index])
+         (musicData: trackArray, songIndex: index, isRadio: false, rootModel: trackArray[index])
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             self.playBtn?.setImage(UIImage(named: "ic_Pause1",in: Bundle.ShadhinMusicSdk,compatibleWith: nil), for: .normal)
             self.tableView.reloadData()

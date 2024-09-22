@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -45,7 +45,6 @@
                 <outlet property="playerSpeedBtn" destination="CNj-01-gVT" id="9ZE-hR-0hz"/>
                 <outlet property="prevPlayBtn" destination="A6u-Rd-lwd" id="JUF-RK-EWM"/>
                 <outlet property="repeatBtn" destination="NPS-iB-KoJ" id="5aK-40-RnR"/>
-                <outlet property="routePickerView" destination="2ZI-5y-407" id="nkM-A9-xvg"/>
                 <outlet property="shadowImageView" destination="12b-8I-sui" id="Baz-Ar-vDh"/>
                 <outlet property="shareButton" destination="FeB-YX-bHC" id="By0-AE-FNQ"/>
                 <outlet property="shuffleBtn" destination="e7v-sP-EYI" id="cXm-a7-Dq3"/>
@@ -58,7 +57,6 @@
                 <outlet property="topSpacing" destination="iRF-eb-0lB" id="eiT-LE-dxj"/>
                 <outlet property="trackDuration" destination="Zwd-W8-iMa" id="cnc-gE-Cmb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="volumeButton" destination="Ny6-Yy-8iP" id="aqA-QY-XK9"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -207,38 +205,10 @@
                                         </connections>
                                     </button>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mRv-sV-W3u">
-                                        <rect key="frame" x="398" y="0.0" width="16" height="36"/>
+                                        <rect key="frame" x="398" y="0.0" width="0.0" height="36"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38Z-mS-nDJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="36"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZI-5y-407" customClass="AVRoutePickerView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="36"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </view>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ny6-Yy-8iP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="36"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="ic_volume_up"/>
-                                                        <connections>
-                                                            <action selector="playerSettingsAction:" destination="-1" eventType="touchDown" id="by9-4h-VBM"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="Ny6-Yy-8iP" firstAttribute="top" secondItem="38Z-mS-nDJ" secondAttribute="top" id="19d-iK-Oph"/>
-                                                    <constraint firstAttribute="trailing" secondItem="2ZI-5y-407" secondAttribute="trailing" id="6u2-oB-TRi"/>
-                                                    <constraint firstItem="2ZI-5y-407" firstAttribute="top" secondItem="38Z-mS-nDJ" secondAttribute="top" id="DrL-Xm-peB"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Ny6-Yy-8iP" secondAttribute="bottom" id="KCN-yb-daQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Ny6-Yy-8iP" secondAttribute="trailing" id="LCq-pN-c9p"/>
-                                                    <constraint firstItem="2ZI-5y-407" firstAttribute="leading" secondItem="38Z-mS-nDJ" secondAttribute="leading" id="egm-Sy-wRr"/>
-                                                    <constraint firstItem="Ny6-Yy-8iP" firstAttribute="leading" secondItem="38Z-mS-nDJ" secondAttribute="leading" id="uAG-Qm-opr"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2ZI-5y-407" secondAttribute="bottom" id="yfx-ag-Fvf"/>
-                                                </constraints>
-                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUP-x3-BNg">
-                                                <rect key="frame" x="16" y="0.0" width="0.0" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="36"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="ic_sleep_timer"/>
                                                 <connections>
@@ -586,7 +556,6 @@
         <image name="ic_shuffle" width="24" height="24"/>
         <image name="ic_sleep_timer" width="24" height="24"/>
         <image name="ic_view" width="24" height="24"/>
-        <image name="ic_volume_up" width="24" height="24"/>
         <image name="music_v4/ic_play" width="36" height="36"/>
         <image name="queueList" width="24" height="24"/>
         <image name="share" width="24" height="25"/>

@@ -515,7 +515,7 @@ class PodcastVC: UITableViewController {
         
         if selectedEpisodeCommentPaid && !ShadhinCore.instance.isUserPro {
             self.goSubscriptionTypeVC()
-            SubscriptionPopUpVC.show(self)
+           // SubscriptionPopUpVC.show(self)
             return
         }
         let vc = storyboard?.instantiateViewController(withIdentifier: "CommentVC") as! CommentVC

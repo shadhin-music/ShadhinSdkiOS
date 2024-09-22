@@ -218,11 +218,6 @@ extension PlaylistSongsPreviewVC : UIScrollViewDelegate{
 extension PlaylistSongsPreviewVC{
     func downloadAllSongs(){
         guard try! Reachability().connection != .unavailable else {return}
-        guard ShadhinCore.instance.isUserPro
-        else {
-            SubscriptionPopUpVC.show(self)
-            return
-        }
         guard let playListID = playlistDetails.contentID else{
             return
         }

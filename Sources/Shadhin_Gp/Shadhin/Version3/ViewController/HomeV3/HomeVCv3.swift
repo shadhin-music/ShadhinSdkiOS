@@ -209,8 +209,6 @@ extension HomeVCv3{
         collectionView?.register(RecentlyPlayerCell.nib, forCellWithReuseIdentifier: RecentlyPlayerCell.identifier)
         //for Download
         collectionView?.register(DownloadsHomeCell.nib, forCellWithReuseIdentifier: DownloadsHomeCell.identifier)
-        //for stream and win
-        collectionView?.register(StreamNwinCollectionCell.nib, forCellWithReuseIdentifier: StreamNwinCollectionCell.identifier)
         //for rewind strory cell
         collectionView?.register(SquareImageCell.nib, forCellWithReuseIdentifier: SquareImageCell.identifier)
         collectionView?.register(SingleImageItemCell.nib, forCellWithReuseIdentifier: SingleImageItemCell.identifier)
@@ -293,11 +291,7 @@ extension HomeVCv3 : HomeAdapterProtocol{
     func onSubscription() {
         self.goSubscriptionTypeVC()
     }
-    
-    func onRewind(rewindData: [TopStreammingElementModel]) {
-        coordinator?.gotoRewind(rewindData: rewindData)
-    }
-    
+        
     func seeAllClick(patch: HomePatch) {
         coordinator?.gotoSeeAll(patch: patch)
     }

@@ -816,12 +816,6 @@ extension PlaylistOrSingleDetailsVC{
     func downloadAllSongs(){
         guard try! Reachability().connection != .unavailable else {return}
 
-        guard ShadhinCore.instance.isUserPro
-        else {
-         //   self.goSubscriptionTypeVC()
-            SubscriptionPopUpVC.show(self)
-            return
-        }
         guard let playListID = discoverModel.contentID else{
             return
         }

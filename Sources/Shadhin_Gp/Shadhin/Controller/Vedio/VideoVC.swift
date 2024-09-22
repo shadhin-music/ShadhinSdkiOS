@@ -27,8 +27,6 @@ class VideoVC: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .customBGColor()
-//        tableView.register(NavtiveLargeAdTCell.nib, forCellReuseIdentifier: NavtiveLargeAdTCell.identifier)
-//        tableView.register(NativeAdMax.nib, forCellReuseIdentifier: NativeAdMax.identifier)
         refreshControl.addTarget(self, action: #selector(tableViewRefresh), for: .valueChanged)
         tableView.addSubview(refreshControl)
         tableView.contentInsetAdjustmentBehavior = .never
@@ -112,84 +110,6 @@ class VideoVC: UIViewController {
         })
     }
     
-    /*private func loadAds(){
-        if ShadhinCore.instance.isUserPro {
-            removeAd()
-            return
-        }
-        guard let useAdProvider = Bundle.main.object(forInfoDictionaryKey: "UseAdProvider") as? String else {
-            adBannerView.isHidden = true
-            return
-        }
-        if useAdProvider == "google"{
-                  loadGoogleAd()
-        }else if(useAdProvider == "applovin"){
-            loadApplovinAd()
-        }else{
-            removeAd()
-        }
-    }*/
-    
-   /* private func removeAd(){
-        if !adBannerMax.subviews.isEmpty,
-            let adView = adBannerMax.subviews[0] as? MAAdView{
-            adView.stopAutoRefresh()
-            adView.isHidden = true
-        }
-        adBannerView.isHidden = true
-        adBannerMax.isHidden = true
-        if willLoadAds{
-            willLoadAds = false
-            tableView.reloadData()
-        }
-    }*/
-    
-   /* private func loadGoogleAd(){
-//        adBannerView.isHidden = false
-//        let screenWidth = UIScreen.main.bounds.size.width
-//        adBannerView.adUnitID = SubscriptionService.instance.googleBannerAdId
-//        adBannerView.rootViewController = self
-//        var size = GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(screenWidth)
-//        size.size.height = 50
-//        adBannerView.adSize = size
-//        adBannerView.load(GADRequest())
-//        adBannerView.delegate = self
-        if !willLoadAds{
-            NativeAdLoader.shared(self.navigationController!).isReadyToLoadAds { success in
-                if success{
-                    self.willLoadAds = true
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    } */
-    
-   /* private func loadApplovinAd(){
-        if !willLoadAds{
-            willLoadAds = true
-            tableView.reloadData()
-
-        }
-        guard adBannerMax.subviews.isEmpty else {return}
-        let adView = MAAdView(adUnitIdentifier: AdConfig.maxBannerAdId)
-        adView.delegate = self
-        let height: CGFloat = 50
-        let width: CGFloat = UIScreen.main.bounds.width
-        adView.frame = CGRect(x: 0, y: 0, width: width, height: height)
-        adBannerMax.addSubview(adView)
-        adView.snp.makeConstraints { [weak self] (make) in
-            guard let strongSelf = self else { return }
-            make.top.equalTo(strongSelf.adBannerMax.snp.top)
-            make.left.equalTo(strongSelf.adBannerMax.snp.left)
-            make.right.equalTo(strongSelf.adBannerMax.snp.right)
-            make.bottom.equalTo(strongSelf.adBannerMax.snp.bottom)
-        }
-        adView.loadAd()
-    }*/
-    
-//    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-//        adBannerView.isHidden = true
-//    }
 }
 
 // MARK: - Table View

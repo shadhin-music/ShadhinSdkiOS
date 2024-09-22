@@ -272,12 +272,6 @@ class HomeCoordinator : NSObject,Coordinator {
         }
         
     }
-    func gotoRewind(rewindData : [TopStreammingElementModel]){
-        let rewind = ShadhinRewindVC.instantiateNib()
-        rewind.streamingData = rewindData
-        rewind.modalPresentationStyle = .fullScreen
-        self.navigationController.present(rewind, animated: true)
-    }
 }
 extension HomeCoordinator {
     func push(vc : UIViewController){

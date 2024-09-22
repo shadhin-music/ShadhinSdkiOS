@@ -731,7 +731,7 @@ extension MusicAlbumListVC {
         guard ShadhinCore.instance.isUserPro
         else {
             self.goSubscriptionTypeVC()
-            SubscriptionPopUpVC.show(self)
+          //  SubscriptionPopUpVC.show(self)
             return
         }
         //post download info to server

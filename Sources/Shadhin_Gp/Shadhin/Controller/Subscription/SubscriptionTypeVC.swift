@@ -67,28 +67,7 @@ class SubscriptionTypeVC: UIViewController {
         }
         
     }
-    
-//    private func goToSubscriptionOptsBdVC(){
-//        self.dismiss(animated: false) {
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//            appDelegate.checkUserSubscription()
-//            let storyBoard = UIStoryboard(name: "Payment", bundle: nil)
-//            let vc = storyBoard.instantiateViewController(withIdentifier: "SubscriptionOptsBdVC") as! SubscriptionOptsBdVC
-//            vc.subscriptionPlanName = self.subscriptionPlanName
-//            vc.subscriptionPlatForm = self.subscriptionPlatForm
-//            let navVC = UINavigationController(rootViewController: vc)
-//            navVC.isNavigationBarHidden = true
-//            navVC.modalPresentationStyle = .fullScreen
-//            navVC.modalTransitionStyle = .coverVertical
-//            if var top = UIApplication.shared.keyWindow?.rootViewController {
-//                while let presentedViewController = top.presentedViewController {
-//                    top = presentedViewController
-//                }
-//                top.present(navVC, animated: true, completion: nil)
-//            }
-//        }
-//    }
-    
+        
     @objc func dismissVC() {
         self.dismiss(animated: true)
     }

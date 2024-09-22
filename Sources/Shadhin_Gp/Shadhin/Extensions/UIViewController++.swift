@@ -80,27 +80,6 @@ extension UIViewController {
         SMAnalytics.viewContent(content: videoData[index])
     }
     
-    
-//    func showNotUserPopUp(callingVC: UIViewController?){
-//        let vc0 = SignInWithMsisddn()
-//        let navVC = UINavigationController(rootViewController: vc0)
-//        navVC.isNavigationBarHidden = true
-//        navVC.modalPresentationStyle = .fullScreen
-//        navVC.modalTransitionStyle = .coverVertical
-//        callingVC?.present(navVC, animated: true)
-//        return
-//////        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//////        let vc = storyBoard.instantiateViewController(withIdentifier: "AskToSignInVC") as! AskToSignInVC
-////        vc.callingVC = callingVC
-////        var attribute = SwiftEntryKitAttributes.bottomAlertWrapAttributesRound(offsetValue: 8)
-////        attribute.entryBackground = .color(color: .clear)
-////        attribute.border = .none
-////        attribute.positionConstraints.size.width = .fill
-////        SwiftEntryKit.layoutIfNeeded()
-////        SwiftEntryKit.display(entry: vc, using: attribute)
-//    }
-    
-
      func goSubscriptionTypeVC(_ useParent:Bool = false,
                               _ subscriptionPlatForm :String = "common",
                               _ subscriptionPlanName :String = "common") {

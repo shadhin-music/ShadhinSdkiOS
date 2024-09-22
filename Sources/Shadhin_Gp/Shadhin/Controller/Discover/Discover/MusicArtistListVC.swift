@@ -817,13 +817,6 @@ extension MusicArtistListVC: MoreMenuDelegate{
 extension MusicArtistListVC {
     func downloadAllSongs(){
         guard try! Reachability().connection != .unavailable else {return}
-
-        guard ShadhinCore.instance.isUserPro
-        else {
-      //      self.goSubscriptionTypeVC()
-            SubscriptionPopUpVC.show(self)
-            return
-        }
         //post download info to server
         ///there is no system to  track artist download in system
         ///so its no need to add download history

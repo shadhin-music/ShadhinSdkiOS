@@ -27,10 +27,7 @@ enum HomePatchType : Int{
     case SINGLE_LINE_WITH_DESCRIPTION               = 16
     case SQR_WITH_DESC_BELOW                        = 17
     case SQR                                        = -3 // missing in cms
-//    case WIN_AND_STREAM                             = -4
     case TICKET                                     = -5
-    case REWIND                                     = -6
- //   case AD                                         = -7
     case AI_PLAYLIST                                = 18
     case UNKNOWN                                    = -1
     
@@ -48,7 +45,6 @@ protocol HomeAdapterProtocol : NSObjectProtocol{
     func gotoLeaderBoard(method : PaymentMethod, campaignType : String)
     func particapetClick(payment : PaymentMethod)
     func seeAllClick(patch : HomePatch)
-    func onRewind(rewindData : [TopStreammingElementModel])
     func onSubscription()
     func navigateToAIGeneratedContent(content: AIPlaylistResponseModel?, imageUrl: String, playlistName: String, playlistId: String)
     func reloadView(indexPath: IndexPath)
@@ -406,17 +402,6 @@ guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowS
 //            return cell
         case .TICKET:
             return collectionView.dequeueReusableCell(withReuseIdentifier: "EmptyCell", for: indexPath)
-
-        case .REWIND:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SquareImageCell.identifier, for: indexPath) as? SquareImageCell else {
-                fatalError()
-            }
-            cell.imageIV.image = UIImage(named: "rewind")
-            cell.setClickListener {[weak self] in
-                guard let self = self else {return}
-                self.delegate.onRewind(rewindData: self.rewindData)
-            }
-            return cell
         case .AI_PLAYLIST :
             if let aiPlaylists {
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AIPlaylistItemCell.identifier, for: indexPath) as? AIPlaylistItemCell else {
@@ -517,9 +502,6 @@ guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowS
             return .zero
         case .TICKET:
             return .zero
-        case .REWIND:
-            let h = (SCREEN_WIDTH - 32) * 184 / 328
-            return .init(width: width, height: h)
         case .AI_PLAYLIST :
             let aspectRatio = 328.0/220.0
             let h  = (SCREEN_WIDTH - 16)/aspectRatio + 10

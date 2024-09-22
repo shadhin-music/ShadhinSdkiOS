@@ -325,12 +325,12 @@ extension PlaylistSongsVC{
     func downloadAllSongs(){
         guard try! Reachability().connection != .unavailable else {return}
 
-        guard ShadhinCore.instance.isUserPro
-        else {
-            //self.goSubscriptionTypeVC()
-            SubscriptionPopUpVC.show(self)
-            return
-        }
+//        guard ShadhinCore.instance.isUserPro
+//        else {
+//            //self.goSubscriptionTypeVC()
+//            SubscriptionPopUpVC.show(self)
+//            return
+//        }
         var dd = CommonContent_V7()
         dd.contentID = playlistID
         dd.contentType = "UP"

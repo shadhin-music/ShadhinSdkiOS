@@ -63,26 +63,7 @@ class AIPlayList: UICollectionViewCell {
         SwiftEntryKit.dismiss()
         SwiftEntryKit.display(entry: vc, using: attributes)
     }
-    
-//    private func goToSubscriptionVC() {
-//        
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        appDelegate.checkUserSubscription()
-//        //let storyBoard = UIStoryboard(name: "Payment", bundle: nil)
-//      //  let vc = SubscriptionV2VC.instantiateNib() //storyBoard.instantiateViewController(withIdentifier: "SubscriptionVC") as! SubscriptionVC
-////        let navVC = UINavigationController(rootViewController: vc)
-////        navVC.isNavigationBarHidden = true
-////        navVC.modalPresentationStyle = .fullScreen
-////        navVC.modalTransitionStyle = .coverVertical
-//        //vc.isInBD = ShadhinCore.instance.userInBD()
-//        if var top = UIApplication.shared.keyWindow?.rootViewController {
-//            while let presentedViewController = top.presentedViewController {
-//                top = presentedViewController
-//            }
-//          //  top.present(navVC, animated: true, completion: nil)
-//        }
-//    }
-    
+        
     private func getMoods(){
         ShadhinApi.getAIMoods {[weak self] moodResponse in
             guard let self = self else {return}

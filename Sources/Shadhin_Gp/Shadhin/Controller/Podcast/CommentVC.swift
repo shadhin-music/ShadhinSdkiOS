@@ -414,7 +414,7 @@ extension CommentVC{
                     if is402{
                         //goProStr = "Go Pro"
                         self.dismiss(animated: true) {
-                            SubscriptionPopUpVC.show(self.podcastVC)
+                          //  SubscriptionPopUpVC.show(self.podcastVC)
                         }
                     }else{
                         self.dismiss(animated: true) {
@@ -489,7 +489,7 @@ extension CommentVC{
                     if is402{
                         //goProStr = "Go Pro"
                         self.dismiss(animated: true) {
-                            SubscriptionPopUpVC.show(self.podcastVC)
+                           // SubscriptionPopUpVC.show(self.podcastVC)
                         }
                     }
                     self.dismiss(animated: true) {

@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 class MainCoordinator : NSObject,Coordinator {
-    
-    
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     

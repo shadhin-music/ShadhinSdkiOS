@@ -296,11 +296,6 @@ extension HomeVCv3 : HomeAdapterProtocol{
         coordinator?.gotoSeeAll(patch: patch)
     }
     
-    func gotoLeaderBoard(method: PaymentMethod, campaignType: String) {
-        self.coordinator?.gotoLeaderBoard(method: method, campaignType: campaignType)
-        
-    }
-    
     func onItemClicked(patch: HomePatch, content: CommonContentProtocol) {
         coordinator?.routeToContent(content: content, patch)
     }

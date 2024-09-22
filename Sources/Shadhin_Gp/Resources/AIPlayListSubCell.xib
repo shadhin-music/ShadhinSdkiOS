@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,14 +31,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3W-Ad-cSQ">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mood1_img" translatesAutoresizingMaskIntoConstraints="NO" id="kai-t0-tF4">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kai-t0-tF4">
                                                 <rect key="frame" x="6" y="6.0000000000000036" width="48" height="48"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="48" id="1fr-vO-sLb"/>
                                                     <constraint firstAttribute="height" constant="48" id="8pB-TY-tU7"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ai_ic" translatesAutoresizingMaskIntoConstraints="NO" id="NBa-zS-euK" customClass="AnimatedImageView" customModule="Shadhin_Gp">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NBa-zS-euK" customClass="AnimatedImageView" customModule="Shadhin_Gp">
                                                 <rect key="frame" x="18" y="18.000000000000004" width="24" height="23.999999999999996"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="o8l-kv-bQZ"/>
@@ -101,8 +101,4 @@
             <point key="canvasLocation" x="152.67175572519082" y="-28.52112676056338"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="ai_ic" width="48" height="49"/>
-        <image name="mood1_img" width="48" height="49"/>
-    </resources>
 </document>

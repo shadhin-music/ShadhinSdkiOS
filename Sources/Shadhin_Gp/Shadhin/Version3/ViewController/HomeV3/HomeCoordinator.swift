@@ -235,20 +235,6 @@ class HomeCoordinator : NSObject,Coordinator {
             navigationController.present(vc, animated: true, completion: nil)
         }
     }
-    
-    func gotoLeaderBoard(method : PaymentMethod,campaignType : String){
-        let leaderBoard = LeaderBoardVC.instantiateNib()
-        leaderBoard.paymentMethod = method
-        leaderBoard.campaignType = campaignType
-        push(vc: leaderBoard)
-    }
-//    func gotoSearch(){
-//        let ss = UIStoryboard.init(name: "Search", bundle: .main)
-////        if let vc = ss.instantiateViewController(withIdentifier: "SearchVC") as? SearchVC{
-////            push(vc: vc)
-////        }
-//        
-//    }
     func gotoDownload(with type : DownloadChipType){
         let download = DownloadVC.instantiateNib()
         download.downloadType = type

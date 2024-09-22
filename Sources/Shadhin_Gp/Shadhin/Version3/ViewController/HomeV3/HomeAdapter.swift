@@ -42,7 +42,6 @@ protocol HomeAdapterProtocol : NSObjectProtocol{
     func onScroll(y: Double)
     func onItemClicked(patch: HomePatch, content: CommonContentProtocol)
     func getNavController() -> UINavigationController
-    func gotoLeaderBoard(method : PaymentMethod, campaignType : String)
     func particapetClick(payment : PaymentMethod)
     func seeAllClick(patch : HomePatch)
     func onSubscription()

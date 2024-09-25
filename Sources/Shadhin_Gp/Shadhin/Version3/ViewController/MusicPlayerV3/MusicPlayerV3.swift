@@ -90,7 +90,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var effectView: UIVisualEffectView!
     
-    @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet var loader: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closePopupButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
@@ -1235,7 +1235,6 @@ extension MusicPlayerV3: AudioPlayerDelegate {
             self.history_timer.invalidate()
             GPAudioViewModel.shared.gpContentPlayingState = .playing
         }else if state == .paused {
-            
             loader.stopAnimating()
             playPauseBtn.isHidden = false
             playPauseBtn.isSelected = false

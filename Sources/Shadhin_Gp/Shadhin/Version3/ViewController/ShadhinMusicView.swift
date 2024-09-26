@@ -287,7 +287,7 @@ public class ShadhinMusicView: UIView {
     private func viewSetupMusicCatagoryList() {
         gpCaroselMusicView.contentMode  = .scaleAspectFill
         gpCaroselMusicView.type = .linear
-        gpCaroselMusicView.viewpointOffset = CGSize(width: 120, height: 0)
+        gpCaroselMusicView.viewpointOffset = CGSize(width: 110, height: 0)
         gpCaroselMusicView.dataSource = self
         gpCaroselMusicView.delegate = self
         visualEffect.cornerRadius = 15
@@ -358,7 +358,7 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
         if let view = view as? UIImageView {
             itemView = view
         } else {
-            itemView = UIImageView(frame: CGRect(x:0, y: 0, width: 116, height: 116))
+            itemView = UIImageView(frame: CGRect(x:8, y: 8, width: 100, height: 100))
             itemView.contentMode = .scaleAspectFill
             itemView.cornerRadius = 16
             itemView.clipsToBounds = true
@@ -422,6 +422,7 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
         }
         
     }
+
     public func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         switch option {
         case .spacing:

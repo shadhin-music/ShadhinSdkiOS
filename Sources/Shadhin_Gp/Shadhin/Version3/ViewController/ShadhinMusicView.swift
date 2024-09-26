@@ -12,7 +12,9 @@ import ShadhinGPObjec
 @IBDesignable
 public class ShadhinMusicView: UIView {
     private var gradientLayer : CAGradientLayer!
-  //  @IBOutlet weak var visualEffect: UIVisualEffectView!
+@IBOutlet weak var visualEffect: UIVisualEffectView!
+    
+    @IBOutlet weak var blugImgView: UIImageView!
     @IBOutlet weak var artistLbl: UILabel!
     @IBOutlet weak var songLbl: UILabel!
     @IBOutlet weak var playDurationLbl: UILabel!
@@ -284,9 +286,11 @@ public class ShadhinMusicView: UIView {
     
     private func viewSetupMusicCatagoryList() {
         gpCaroselMusicView.contentMode  = .scaleAspectFill
-        gpCaroselMusicView.type = .rotary
+        gpCaroselMusicView.type = .linear
+        gpCaroselMusicView.viewpointOffset = CGSize(width: 120, height: 0)
         gpCaroselMusicView.dataSource = self
         gpCaroselMusicView.delegate = self
+        visualEffect.cornerRadius = 15
         gpCaroselMusicView.reloadData() // Ens
         AudioPlayer.shared.delegate = self
         
@@ -388,8 +392,20 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
     
     public func carouselDidEndScrollingAnimation(_ carousel: iCarousel) {
         let newIndex = carousel.currentItemIndex
-
-        // Check if the selected index has changed
+        // Assuming you have an array of background images corresponding to each carousel item
+        // Ensure newIndex is within the bounds of gpMusicContents
+        if newIndex >= 0 && newIndex < viewModel.gpMusicContents.count {
+            let urlString = viewModel.gpMusicContents[newIndex].imageUrl?.image300 ?? ""
+            
+            if let url = URL(string: urlString) {
+                blugImgView.kf.setImage(with: url)
+                blugImgView.cornerRadius = 15
+                blugImgView.contentMode  = .center
+                blugImgView.alpha = 0.2
+            }
+        } else {
+            print("newIndex is out of range. Current index: \(newIndex), array count: \(viewModel.gpMusicContents.count)")
+        }
         if viewModel.selectedIndexInCarousel != newIndex {
             viewModel.selectedIndexInCarousel = newIndex
             
@@ -403,6 +419,15 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
                 }
             }
             
+        }
+        
+    }
+    public func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        switch option {
+        case .spacing:
+            return value * 1.1// Adjust this multiplier for more or less spacing
+        default:
+            return value
         }
     }
     

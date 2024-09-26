@@ -73,7 +73,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="220" id="NZY-js-kF8"/>
                             </constraints>
-                            <blurEffect style="systemChromeMaterial"/>
+                            <blurEffect style="systemMaterial"/>
                         </visualEffectView>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAT-Ms-zaE" customClass="iCarousel">
                             <rect key="frame" x="0.0" y="0.0" width="445" height="116"/>

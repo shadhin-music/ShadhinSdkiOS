@@ -17,8 +17,8 @@ class PodcastCollectionCell: UITableViewCell {
         case LandscapeWithLabel
         case SquareSmallWithLabel
         case VideoPortrait
-        case VideoLandscape
-        case VideoLandscapeV2
+      //  case VideoLandscape
+       // case VideoLandscapeV2
     }
     
     static var nib:UINib {
@@ -47,8 +47,8 @@ class PodcastCollectionCell: UITableViewCell {
         collectionView.register(PortraitCell.nib, forCellWithReuseIdentifier: PortraitCell.identifier)
         collectionView.register(SquareCell.nib, forCellWithReuseIdentifier: SquareCell.identifier)
         collectionView.register(VideoPortraitCell.nib, forCellWithReuseIdentifier: VideoPortraitCell.identifier)
-        collectionView.register(VideoLandscapeCell.nib, forCellWithReuseIdentifier: VideoLandscapeCell.identifier)
-        collectionView.register(VideoLandscapeV2Cell.nib, forCellWithReuseIdentifier: VideoLandscapeV2Cell.identifier)
+      //  collectionView.register(VideoLandscapeCell.nib, forCellWithReuseIdentifier: VideoLandscapeCell.identifier)
+      //  collectionView.register(VideoLandscapeV2Cell.nib, forCellWithReuseIdentifier: VideoLandscapeV2Cell.identifier)
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -85,7 +85,7 @@ extension PodcastCollectionCell : UICollectionViewDelegate,UICollectionViewDataS
                 self.podcastExploreVC?.openPodcast(patchItem: patchItem)
             }
             return cell
-        case "vl":
+      /*  case "vl":
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideoLandscapeCell.identifier, for: indexPath) as! VideoLandscapeCell
             cell.primaryLabel.text = patchItem.episodeName
             //cell.secondaryLabel.text = "\(patchItem.presenter) • \(patchItem.duration)"
@@ -120,7 +120,7 @@ extension PodcastCollectionCell : UICollectionViewDelegate,UICollectionViewDataS
                 //self.podcastExploreVC?.openPodcast(patchItem: patchItem)
                 PodcastYoutubeVC.openLivePodcast(self.podcastExploreVC, track)
             }
-            return cell
+            return cell */
         case "pp", "news":
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SquareBigCell.identifier, for: indexPath) as! SquareBigCell
 
@@ -133,7 +133,7 @@ extension PodcastCollectionCell : UICollectionViewDelegate,UICollectionViewDataS
             }
 
             return cell
-        case "vp":
+       /* case "vp":
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideoLandscapeV2Cell.identifier, for: indexPath) as! VideoLandscapeV2Cell
             
             let imgUrl = patchItem.imageURL.replacingOccurrences(of: "<$size$>", with: PodcastAPI.getImgSize(patchData.patchType))
@@ -148,7 +148,7 @@ extension PodcastCollectionCell : UICollectionViewDelegate,UICollectionViewDataS
                 self.podcastExploreVC?.openPodcast(patchItem: patchItem)
             }
             
-            return cell
+            return cell */
         case "ps":
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LandscapeCell.identifier, for: indexPath) as! LandscapeCell
             

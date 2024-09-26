@@ -21,7 +21,6 @@
                         <segue destination="qjq-Zg-rCe" kind="relationship" relationship="viewControllers" id="Zks-wD-Cyf"/>
                         <segue destination="76a-eh-xXq" kind="relationship" relationship="viewControllers" id="JJh-kX-MTp"/>
                         <segue destination="L98-Qu-TNz" kind="relationship" relationship="viewControllers" id="2SG-BX-VQ4"/>
-                        <segue destination="Fh7-XQ-fWh" kind="relationship" relationship="viewControllers" id="CTa-FW-Lvw"/>
                         <segue destination="NlS-KU-IsJ" kind="relationship" relationship="viewControllers" id="2NV-BW-2kP"/>
                     </connections>
                 </tabBarController>
@@ -74,16 +73,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAI-J4-3Rp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640" y="-107"/>
-        </scene>
-        <!--Video-->
-        <scene sceneID="TTO-Eo-R8D">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Video" id="Fh7-XQ-fWh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2s7-Cm-dbz"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K10-d8-MXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="625" y="-14"/>
         </scene>
         <!--Search-->
         <scene sceneID="8fR-8F-WXH">

@@ -43,10 +43,10 @@ class PodcastAPI{
             return CGSize(width: 136, height: 136 + 48)
         case .VideoPortrait:
             return VideoPortraitCell.size
-        case .VideoLandscape:
-            return VideoLandscapeCell.size
-        case .VideoLandscapeV2:
-            return VideoLandscapeV2Cell.size
+//        case .VideoLandscape:
+//            return VideoLandscapeCell.size
+//        case .VideoLandscapeV2:
+//            return VideoLandscapeV2Cell.size
         }
     }
     
@@ -54,8 +54,8 @@ class PodcastAPI{
         switch patchType.lowercased() {
         case "le":
             return CGSize(width: 136, height: 136 + 48)
-        case "vl":
-            return VideoLandscapeCell.size
+//        case "vl":
+//            return VideoLandscapeCell.size
         case "pp", "news":
             return CGSize(width: 136, height: 136)
         case "ps":
@@ -64,8 +64,8 @@ class PodcastAPI{
             return CGSize(width: 136, height: 204 + 48)
 //        case "vp":
 //            return VideoPortraitCell.size
-        case "vp":
-            return VideoLandscapeV2Cell.size
+//        case "vp":
+//            return VideoLandscapeV2Cell.size
         case "tn":
             return CGSize.zero
         default:

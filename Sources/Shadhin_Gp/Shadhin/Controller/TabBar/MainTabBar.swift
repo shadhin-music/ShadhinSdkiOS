@@ -31,15 +31,10 @@ public class MainTabBar: UITabBarController , UITabBarControllerDelegate {
             UITabBar.appearance().scrollEdgeAppearance = UITabBar.appearance().standardAppearance
         }
         
-//        let homeItem = UITabBarItem(title: "Home", image: UIImage(named: "ic_home_2"), tag: 0)
-//        let home = HomeVCv3.instantiateNib()
-//        let nav = UINavigationController(rootViewController: home)
-//        nav.tabBarItem = homeItem
-//        viewControllers?[0] = nav
         if let nav = viewControllers?[0] as? UINavigationController{
             nav.setViewControllers([HomeVCv3.instantiateNib()], animated: true)
         }
-        if let nav = viewControllers?[4] as? UINavigationController{
+        if let nav = viewControllers?[3] as? UINavigationController{
             nav.setViewControllers([SubscriptionVCv3.instantiateNib()], animated: true)
         }
         Log.info("Tabbar didload")
@@ -79,7 +74,7 @@ public class MainTabBar: UITabBarController , UITabBarControllerDelegate {
 //            return false
 //        }
 //        
-        if index == 4 {
+        if index == 3 {
             let vc  = SubscriptionVCv3.instantiateNib()
             let navVC = UINavigationController(rootViewController: vc)
             navVC.isNavigationBarHidden = true

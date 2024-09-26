@@ -17,12 +17,12 @@ enum HomePatchType : Int{
     case DOWNLOADED                                 = 6
     case TWO_ROW_SQR                                = 7
     case PATCH_DESC_TOP_WITH_SQR_DESC_BELOW         = 8
-    case SQR_PAGER_WITH_DESC_BELOW                  = 9
+  //  case SQR_PAGER_WITH_DESC_BELOW                  = 9
     case TWO_ROW_SQR_WITH_DESC_BELOW                = 10
     case CIRCULAR_WITH_DESC_BELOW                   = 11
     case REC_PAGER_WITH_DESC_INSIDE                 = 12
-    case TWO_ROW_REC_DESC_BELOW                     = 13
-    case TEASER                                     = 14
+   // case TWO_ROW_REC_DESC_BELOW                     = 13
+  //  case TEASER                                     = 14
     case PATCH_DESC_TOP_WITH_REC_PORT_DESC_BELOW    = 15
     case SINGLE_LINE_WITH_DESCRIPTION               = 16
     case SQR_WITH_DESC_BELOW                        = 17
@@ -244,20 +244,20 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             }
             
             return cell
-        case .SQR_PAGER_WITH_DESC_BELOW:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SqrPagerWithDescBelow.identifier, for: indexPath) as? SqrPagerWithDescBelow else{
-                fatalError()
-            }
-            cell.bind(with: obj.contents)
-            cell.onItemClick = {[weak self] content in
-                guard let self = self else {return}
-                self.delegate.onItemClicked(patch: obj, content: content)
-            }
-            cell.seeAllClick = {[weak self] in
-                guard let self = self else {return}
-                self.delegate.seeAllClick(patch: obj)
-            }
-            return cell
+//        case .SQR_PAGER_WITH_DESC_BELOW:
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SqrPagerWithDescBelow.identifier, for: indexPath) as? SqrPagerWithDescBelow else{
+//                fatalError()
+//            }
+//            cell.bind(with: obj.contents)
+//            cell.onItemClick = {[weak self] content in
+//                guard let self = self else {return}
+//                self.delegate.onItemClicked(patch: obj, content: content)
+//            }
+//            cell.seeAllClick = {[weak self] in
+//                guard let self = self else {return}
+//                self.delegate.seeAllClick(patch: obj)
+//            }
+//            return cell
         case .TWO_ROW_SQR_WITH_DESC_BELOW:
 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowSqrWithDescBelow.identifier, for: indexPath) as? TwoRowSqrWithDescBelow else{
                 fatalError()
@@ -324,30 +324,30 @@ guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowS
                 self.delegate.onItemClicked(patch: obj, content: content)
             }
             return cell
-        case .TWO_ROW_REC_DESC_BELOW:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowRecDescBelow.identifier, for: indexPath) as? TwoRowRecDescBelow else{
-                fatalError()
-            }
-            cell.configureCell(with: dataSource[index])
-            cell.onItemClick = {[weak self] content in
-                guard let self = self else {return}
-                self.delegate.onItemClicked(patch: obj, content: content)
-            }
-            cell.onSeeAll = {[weak self] in
-                guard let self = self else {return}
-                self.delegate.seeAllClick(patch: obj)
-            }
-            return cell
-        case .TEASER:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Teaser.identifier, for: indexPath) as? Teaser else{
-                fatalError()
-            }
-            if let content = obj.contents.first{
-                cell.bind(with: content)
-            }
-            cell.onPaidContent = delegate.onSubscription
-            
-            return cell
+//        case .TWO_ROW_REC_DESC_BELOW:
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowRecDescBelow.identifier, for: indexPath) as? TwoRowRecDescBelow else{
+//                fatalError()
+//            }
+//            cell.configureCell(with: dataSource[index])
+//            cell.onItemClick = {[weak self] content in
+//                guard let self = self else {return}
+//                self.delegate.onItemClicked(patch: obj, content: content)
+//            }
+//            cell.onSeeAll = {[weak self] in
+//                guard let self = self else {return}
+//                self.delegate.seeAllClick(patch: obj)
+//            }
+//            return cell
+//        case .TEASER:
+//            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Teaser.identifier, for: indexPath) as? Teaser else{
+//                fatalError()
+//            }
+//            if let content = obj.contents.first{
+//                cell.bind(with: content)
+//            }
+//            cell.onPaidContent = delegate.onSubscription
+//            
+//            return cell
         case .PATCH_DESC_TOP_WITH_REC_PORT_DESC_BELOW:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PatchDescTopWithRecPortDescBelow.identifier, for: indexPath) as? PatchDescTopWithRecPortDescBelow else{
                 fatalError()
@@ -466,8 +466,8 @@ guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowS
             return .init(width: width, height: TwoRowSqr.height)
         case .PATCH_DESC_TOP_WITH_SQR_DESC_BELOW:
             return .init(width: width, height: PatchDescTopWithSqrDescBelow.height)
-        case .SQR_PAGER_WITH_DESC_BELOW:
-            return .init(width: width, height: SqrPagerWithDescBelow.height)
+//        case .SQR_PAGER_WITH_DESC_BELOW:
+//            return .init(width: width, height: SqrPagerWithDescBelow.height)
         case .TWO_ROW_SQR_WITH_DESC_BELOW:
             return .init(width: width, height: TwoRowSqrWithDescBelow.height)
         case .CIRCULAR_WITH_DESC_BELOW:
@@ -478,10 +478,10 @@ guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TwoRowS
             return .init(width: width, height: SingleImageItemCell.height)
         case .REC_PAGER_WITH_DESC_INSIDE:
             return .init(width: width, height: RecPagerWithDescInside.height)
-        case .TWO_ROW_REC_DESC_BELOW:
-            return .init(width: width, height: TwoRowRecDescBelow.height)
-        case .TEASER:
-            return .init(width: width, height: Teaser.height)
+//        case .TWO_ROW_REC_DESC_BELOW:
+//            return .init(width: width, height: TwoRowRecDescBelow.height)
+//        case .TEASER:
+//            return .init(width: width, height: Teaser.height)
         case .PATCH_DESC_TOP_WITH_REC_PORT_DESC_BELOW:
             let obj = dataSource[index]
             if obj.description == nil{

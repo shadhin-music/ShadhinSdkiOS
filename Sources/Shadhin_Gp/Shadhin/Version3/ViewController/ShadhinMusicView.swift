@@ -12,7 +12,7 @@ import ShadhinGPObjec
 @IBDesignable
 public class ShadhinMusicView: UIView {
     private var gradientLayer : CAGradientLayer!
-    @IBOutlet weak var visualEffect: UIVisualEffectView!
+  //  @IBOutlet weak var visualEffect: UIVisualEffectView!
     @IBOutlet weak var artistLbl: UILabel!
     @IBOutlet weak var songLbl: UILabel!
     @IBOutlet weak var playDurationLbl: UILabel!
@@ -22,9 +22,6 @@ public class ShadhinMusicView: UIView {
     let viewModel = GPAudioViewModel.shared
     
     @IBOutlet weak var seeAllbtn: UIView!
-    @IBOutlet weak var iCarouselLeftConst: NSLayoutConstraint!
-    
-    @IBOutlet weak var blurImage: UIImageView!
     @IBOutlet weak var gpPlayerSlider: UISlider!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var exploreMoreView: UIView!
@@ -58,33 +55,33 @@ public class ShadhinMusicView: UIView {
         viewModel.changeTitle = changeTrendingTitle
         viewModel.changeAllButtonsToImageName.append(setButtonImage)
         
-        gradientSetup()
+       // gradientSetup()
     }
     
-    func gradientSetup(){
-        
-        gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [
-            
-            UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor,
-            
-            UIColor(red: 0.081, green: 0.317, blue: 0.488, alpha: 1).cgColor
-            
-        ]
-        
-        gradientLayer.locations = [0, 1]
-        
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.25)
-        
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.78)
-        
-        //gradientLayer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 1, c: -1, d: 0, tx: 1, ty: 0))
-        
-        //self.view.layer.insertSublayer(gradientLayer, at: 0)
-        self.visualEffect.contentView.layer.insertSublayer(gradientLayer, at: 0)
-        
-    }
+//    func gradientSetup(){
+//        
+//        gradientLayer = CAGradientLayer()
+//        gradientLayer.frame = view.bounds
+//        gradientLayer.colors = [
+//            
+//            UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor,
+//            
+//            UIColor(red: 0.081, green: 0.317, blue: 0.488, alpha: 1).cgColor
+//            
+//        ]
+//        
+//        gradientLayer.locations = [0, 1]
+//        
+//        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.25)
+//        
+//        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.78)
+//        
+//        //gradientLayer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 1, c: -1, d: 0, tx: 1, ty: 0))
+//        
+//        //self.view.layer.insertSublayer(gradientLayer, at: 0)
+//        self.visualEffect.contentView.layer.insertSublayer(gradientLayer, at: 0)
+//        
+//    }
     
     func clickListenerForMsisdn() {
         if let accessToken = self.accessToken, let vc = self.vc {
@@ -341,7 +338,7 @@ public class ShadhinMusicView: UIView {
     }
     
     @IBAction func playerSliderAction(_ sender: UISlider) {
-        MusicPlayerV3.shared
+       // MusicPlayerV3.shared
         let value = Float(MusicPlayerV3.audioPlayer.currentItemDuration ?? 1) * sender.value
         MusicPlayerV3.audioPlayer.seek(to: TimeInterval(value))
     }
@@ -357,7 +354,7 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
         if let view = view as? UIImageView {
             itemView = view
         } else {
-            itemView = UIImageView(frame: CGRect(x: 0, y: 0, width: 116, height: 116))
+            itemView = UIImageView(frame: CGRect(x:0, y: 0, width: 116, height: 116))
             itemView.contentMode = .scaleAspectFill
             itemView.cornerRadius = 16
             itemView.clipsToBounds = true
@@ -368,7 +365,6 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
         if let url = URL(string: urlString) {
             itemView.kf.setImage(with: url)
         }
-        
         return itemView
         
         
@@ -409,6 +405,7 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
             
         }
     }
+    
 }
 
 

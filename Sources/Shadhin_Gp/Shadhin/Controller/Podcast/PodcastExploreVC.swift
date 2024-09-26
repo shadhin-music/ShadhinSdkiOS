@@ -28,8 +28,6 @@ class PodcastExploreVC: UIViewController {
         super.viewDidLoad()
         tableView.register(PodcastCollectionCell.nib, forCellReuseIdentifier: PodcastCollectionCell.identifier)
         tableView.register(PodcastTrendingCell.nib, forCellReuseIdentifier: PodcastTrendingCell.identifier)
-//        tableView.register(NavtiveLargeAdTCell.nib, forCellReuseIdentifier: NavtiveLargeAdTCell.identifier)
-//        tableView.register(NativeAdMax.nib, forCellReuseIdentifier: NativeAdMax.identifier)
         tableView.contentInset = UIEdgeInsets(top: 20,left: 0,bottom: 0,right: 0)
         tableView.dataSource = self
         tableView.delegate = self
@@ -241,14 +239,14 @@ extension PodcastExploreVC : UITableViewDelegate,UITableViewDataSource{
         switch patchData.patchType.lowercased() {
         case "le":
             return PodcastCollectionCell.size(.SquareSmallWithLabel)
-        case "vl":
-            return PodcastCollectionCell.size(.VideoLandscape)
+//        case "vl":
+//            return PodcastCollectionCell.size(.VideoLandscape)
         case "pp", "news":
             return PodcastCollectionCell.size(.SquareBig)
 //        case "vp":
 //            return PodcastCollectionCell.size(.VideoPortrait)
-        case "vp":
-            return PodcastCollectionCell.size(.VideoLandscapeV2)
+//        case "vp":
+//            return PodcastCollectionCell.size(.VideoLandscapeV2)
         case "ps":
             return PodcastCollectionCell.size(.LandscapeWithLabel)
         case "ss", "tpc":
@@ -275,14 +273,18 @@ extension PodcastExploreVC : UITableViewDelegate,UITableViewDataSource{
         guard let patchData = podcastExplore?.data[section] else{
             return nil
         }
-        
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
-        let label = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.frame.width, height: 30))
-        label.text = patchData.patchName
-        label.backgroundColor = UIColor.clear
-        label.font = UIFont.init(name: "OpenSans-SemiBold", size: 20)
-        view.addSubview(label)
-        return view
+        switch patchData.patchType.lowercased() {
+        case "ss", "ps", "pp", "le", "news", "tpc":
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
+            let label = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.frame.width, height: 30))
+            label.text = patchData.patchName
+            label.backgroundColor = UIColor.clear
+            label.font = UIFont.init(name: "OpenSans-SemiBold", size: 20)
+            view.addSubview(label)
+            return view
+        default:
+            return UIView()
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

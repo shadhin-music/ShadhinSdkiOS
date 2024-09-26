@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1hb-zQ-qEY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1hb-zQ-qEY">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -24,13 +24,13 @@
         <!--Root View Controller-->
         <scene sceneID="pYn-37-Tom">
             <objects>
-                <tableViewController storyboardIdentifier="PodcastVC" id="dlA-Xn-6SC" customClass="PodcastVC" customModule="Shadhin_Gp"  sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PodcastVC" id="dlA-Xn-6SC" customClass="PodcastVC" customModule="Shadhin_Gp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" id="Adw-4m-mzm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PodcastHeaderOneViewCell" rowHeight="395" id="dIx-gk-Hjo" customClass="PodcastHeaderOneViewCell" customModule="Shadhin_Gp" >
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PodcastHeaderOneViewCell" rowHeight="395" id="dIx-gk-Hjo" customClass="PodcastHeaderOneViewCell" customModule="Shadhin_Gp">
                                 <rect key="frame" x="0.0" y="50" width="414" height="395"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIx-gk-Hjo" id="hAB-qe-Hir">
@@ -40,7 +40,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0k8-jT-fRm">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="395"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Replace this" translatesAutoresizingMaskIntoConstraints="NO" id="twQ-hA-cuB" customClass="UIImageViewWithMask" customModule="Shadhin_Gp" >
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Replace this" translatesAutoresizingMaskIntoConstraints="NO" id="twQ-hA-cuB" customClass="UIImageViewWithMask" customModule="Shadhin_Gp">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="211"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="maskImage" value="bg mask"/>
@@ -54,7 +54,7 @@
                                                     </view>
                                                     <blurEffect style="regular"/>
                                                 </visualEffectView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-1F-cej" customClass="GradientUIView" customModule="Shadhin_Gp" >
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-1F-cej" customClass="GradientUIView" customModule="Shadhin_Gp">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="211"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -76,7 +76,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrQ-jr-I5T" customClass="GradientUIView" customModule="Shadhin_Gp" >
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OrQ-jr-I5T" customClass="GradientUIView" customModule="Shadhin_Gp">
                                                     <rect key="frame" x="234" y="0.0" width="180" height="211"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -98,7 +98,7 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcX-5h-bKD" customClass="AngleView" customModule="Shadhin_Gp" >
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcX-5h-bKD" customClass="AngleView" customModule="Shadhin_Gp">
                                                     <rect key="frame" x="0.0" y="171" width="414" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="QXS-vI-Mnw"/>
@@ -305,7 +305,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXW-cZ-DpW" customClass="GradientUIView" customModule="Shadhin_Gp" >
+                                        <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXW-cZ-DpW" customClass="GradientUIView" customModule="Shadhin_Gp">
                                             <rect key="frame" x="16" y="0.0" width="382" height="130"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVw-no-L31">
@@ -317,7 +317,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-ti-ktX" customClass="ReadMoreLessView" customModule="Shadhin_Gp" >
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-ti-ktX" customClass="ReadMoreLessView" customModule="Shadhin_Gp">
                                                     <rect key="frame" x="16" y="46" width="350" height="82"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -396,7 +396,7 @@
                                     <outlet property="adBannerMax" destination="sBS-Da-SHH" id="L9J-Nf-QTA"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PodcastItemViewCell" rowHeight="74" id="1M0-K5-SIX" customClass="PodcastItemViewCell" customModule="Shadhin_Gp" >
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PodcastItemViewCell" rowHeight="74" id="1M0-K5-SIX" customClass="PodcastItemViewCell" customModule="Shadhin_Gp">
                                 <rect key="frame" x="0.0" y="587" width="414" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1M0-K5-SIX" id="qwb-N1-yat">
@@ -406,7 +406,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOh-d7-Zq5">
                                             <rect key="frame" x="16" y="16" width="382" height="42"/>
                                             <subviews>
-                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIS-oF-z4e" customClass="CircularProgress" customModule="Shadhin_Gp" >
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIS-oF-z4e" customClass="CircularProgress" customModule="Shadhin_Gp">
                                                     <rect key="frame" x="352" y="8.5" width="25" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -580,7 +580,7 @@
                                                 <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PodcastEpisodeItem" reuseIdentifier="PodcastEpisodeItem" id="mMR-rq-1JS" customClass="PodcastEpisodeItem" customModule="Shadhin_Gp" >
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PodcastEpisodeItem" reuseIdentifier="PodcastEpisodeItem" id="mMR-rq-1JS" customClass="PodcastEpisodeItem" customModule="Shadhin_Gp">
                                                     <rect key="frame" x="16" y="0.0" width="138" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5xV-6q-rlX">
@@ -644,7 +644,7 @@
                                     <outlet property="seeAllBtn" destination="3pV-Uw-fRx" id="a6B-mS-xLY"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentHeaderCell" rowHeight="112" id="Jhu-7l-PV6" customClass="CommentHeaderCell" customModule="Shadhin_Gp" >
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentHeaderCell" rowHeight="112" id="Jhu-7l-PV6" customClass="CommentHeaderCell" customModule="Shadhin_Gp">
                                 <rect key="frame" x="0.0" y="881" width="414" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jhu-7l-PV6" id="J5V-ar-uH9">
@@ -792,7 +792,7 @@
         <!--Library-->
         <scene sceneID="Vr1-73-E1T">
             <objects>
-                <viewController storyboardIdentifier="PodcastLibraryVC" id="0Vf-Qa-vZI" customClass="PodcastLibraryVC" customModule="Shadhin_Gp"  sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PodcastLibraryVC" id="0Vf-Qa-vZI" customClass="PodcastLibraryVC" customModule="Shadhin_Gp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qdg-ht-nZB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="693"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -883,7 +883,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jVm-Dc-5IE">
                                 <rect key="frame" x="0.0" y="217.5" width="414" height="392.5"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PodcastRecentItem" rowHeight="70" id="n9y-56-jqU" customClass="PodcastRecentItem" customModule="Shadhin_Gp" >
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PodcastRecentItem" rowHeight="70" id="n9y-56-jqU" customClass="PodcastRecentItem" customModule="Shadhin_Gp">
                                         <rect key="frame" x="0.0" y="50" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9y-56-jqU" id="4Fs-9E-udA">
@@ -921,7 +921,7 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yg-zQ-pBM" customClass="CircularProgress" customModule="Shadhin_Gp" >
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Yg-zQ-pBM" customClass="CircularProgress" customModule="Shadhin_Gp">
                                                             <rect key="frame" x="364" y="15" width="30" height="30"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -1123,14 +1123,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Dwp-5o-m9H">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dwp-5o-m9H">
                                         <rect key="frame" x="16" y="12" width="382" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-A1-m3s">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="xyq-Xd-vQn"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="191" height="60"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1144,11 +1141,8 @@
                                                     <action selector="exploreBtnTapped:" destination="wvH-47-mdE" eventType="touchUpInside" id="PgM-mZ-ylL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bza-kE-bEl">
-                                                <rect key="frame" x="146" y="0.0" width="90" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="Ged-Er-fu2"/>
-                                                </constraints>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bza-kE-bEl">
+                                                <rect key="frame" x="191" y="0.0" width="0.0" height="60"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                 <color key="tintColor" systemColor="systemGrayColor"/>
                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1163,10 +1157,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUN-6K-LCy">
-                                                <rect key="frame" x="292" y="0.0" width="90" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="gso-xF-FNe"/>
-                                                </constraints>
+                                                <rect key="frame" x="191" y="0.0" width="191" height="60"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                 <color key="tintColor" systemColor="systemGrayColor"/>
                                                 <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1297,7 +1288,7 @@
         <!--CommentVC-->
         <scene sceneID="nws-Vh-qR3">
             <objects>
-                <viewController storyboardIdentifier="CommentVC" id="noh-Oc-Ba3" customClass="CommentVC" customModule="Shadhin_Gp"  sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentVC" id="noh-Oc-Ba3" customClass="CommentVC" customModule="Shadhin_Gp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LBa-2Q-fEE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1306,7 +1297,7 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentVCHeaderCell" rowHeight="56" id="83J-SY-8VO" customClass="CommentVCHeaderCell" customModule="Shadhin_Gp" >
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentVCHeaderCell" rowHeight="56" id="83J-SY-8VO" customClass="CommentVCHeaderCell" customModule="Shadhin_Gp">
                                         <rect key="frame" x="0.0" y="50" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="83J-SY-8VO" id="Qvf-0K-ZoS">
@@ -1343,7 +1334,7 @@
                                             <outlet property="closeBtn" destination="mXD-kV-msL" id="uL0-W5-CNp"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentVCAddCell" rowHeight="60" id="ceO-ds-Xzw" customClass="CommentVCAddCell" customModule="Shadhin_Gp" >
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentVCAddCell" rowHeight="60" id="ceO-ds-Xzw" customClass="CommentVCAddCell" customModule="Shadhin_Gp">
                                         <rect key="frame" x="0.0" y="106" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ceO-ds-Xzw" id="nXD-GD-wgj">
@@ -1451,7 +1442,7 @@
                                 <rect key="frame" x="0.0" y="375" width="414" height="421"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentHeaderCell" rowHeight="112" id="j1x-C1-uvC" customClass="CommentHeaderCell" customModule="Shadhin_Gp" >
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentHeaderCell" rowHeight="112" id="j1x-C1-uvC" customClass="CommentHeaderCell" customModule="Shadhin_Gp">
                                         <rect key="frame" x="0.0" y="50" width="414" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j1x-C1-uvC" id="Yoi-qq-c1R">
@@ -1805,11 +1796,6 @@
             <point key="canvasLocation" x="480" y="869"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="twQ-hA-cuB">
-            <size key="intrinsicContentSize" width="248" height="248"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Replace this" width="248" height="248"/>
         <image name="bg mask" width="380" height="180"/>
@@ -1849,34 +1835,34 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="quaternaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.1764705882" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

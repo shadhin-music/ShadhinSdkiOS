@@ -37,7 +37,7 @@
                 <outlet property="liveHolder" destination="N1q-uJ-kzL" id="FRG-hU-kcD"/>
                 <outlet property="liveHolderOffset" destination="cOW-Nd-c0N" id="JPa-gS-Ab3"/>
                 <outlet property="liveLabel" destination="ORg-Kn-rbd" id="WQq-Aj-AWA"/>
-                <outlet property="loader" destination="way-U8-Pd2" id="mLP-RU-Gy9"/>
+                <outlet property="loader" destination="way-U8-Pd2" id="0po-aA-73M"/>
                 <outlet property="nextPlayBtn" destination="t1w-JY-MmJ" id="roG-WY-Iwm"/>
                 <outlet property="playDurationLbl" destination="xUe-fF-K8d" id="QAu-fm-Run"/>
                 <outlet property="playPauseBtn" destination="5cr-T7-Nw1" id="VCu-JE-9Qk"/>
@@ -572,7 +572,7 @@
             <color red="0.0" green="0.68999999761581421" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

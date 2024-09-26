@@ -90,7 +90,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var effectView: UIVisualEffectView!
     
-    @IBOutlet var loader: UIActivityIndicatorView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var closePopupButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
@@ -1235,7 +1235,7 @@ extension MusicPlayerV3: AudioPlayerDelegate {
             self.history_timer.invalidate()
             GPAudioViewModel.shared.gpContentPlayingState = .playing
         }else if state == .paused {
-            loader.stopAnimating()
+            loader?.stopAnimating()
             playPauseBtn.isHidden = false
             playPauseBtn.isSelected = false
             playPauseBarBtn.image = UIImage(named: "normal play",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)

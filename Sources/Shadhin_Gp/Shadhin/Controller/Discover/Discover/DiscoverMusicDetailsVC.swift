@@ -112,14 +112,13 @@ extension DiscoverMusicDetailsVC: UICollectionViewDelegate,UICollectionViewDataS
         case .playlist:
             let vc3 = goPlaylistVC(content: data)
             self.navigationController?.pushViewController(vc3, animated: true)
-        case .unknown, .subscription:
+        case .unknown:
             Log.warning("Unknown content type \(data.contentType ?? "") not configured in view all")
         case .LK:
             break
         case .myPlayList:
             break
         }
-        
         
 //        if designName == "Artist" {
 //            let vc1 = goArtistVC(content: songDetails[indexPath.item])

@@ -17,7 +17,6 @@ let package = Package(
     ],
     dependencies: [
         // Add dependencies here if needed
-        
     ],
     targets: [
         .target(

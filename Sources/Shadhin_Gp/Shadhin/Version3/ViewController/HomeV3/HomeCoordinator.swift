@@ -57,8 +57,8 @@ class HomeCoordinator : NSObject,Coordinator {
         case .playlist:
             let suggestion = patch?.contents.filter({$0.contentType?.lowercased()=="p"}) ?? []
             goToPlaylist(content: content, suggestion)
-//        case .subscription:
-//            goToSubscription(content: content)
+        case .subscription:
+            goToSubscription(content: content)
         case .LK:
             //let suggestion = patch?.contents.filter({$0.contentType?.uppercased()=="LK"}) ?? []
             gotoTeasereUrl(content: content)
@@ -204,14 +204,36 @@ class HomeCoordinator : NSObject,Coordinator {
     }
     
     func goToSubscription(content: CommonContentProtocol){
-        goToSubscription()
+        guard let homeContent = content as? Content else {return}
+//        guard ShadhinCore.instance.isUserLoggedIn else{
+//            navigationController.showNotUserPopUp(callingVC: navigationController)
+//            return
+//        }
+        let subscriptionPlatForm = homeContent.trackType ?? "common"
+        let subscriptionPlanName = homeContent.albumID ?? "common"
+        goToSubscription(false, subscriptionPlatForm, subscriptionPlanName)
     }
     
-    func goToSubscription() {
-        let vc = SubscriptionVCv3.instantiateNib()
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .coverVertical
-        navigationController.present(vc, animated: true)
+    func goToSubscription(_ useParent:Bool = false,
+                          _ subscriptionPlatForm :String = "common",
+                          _ subscriptionPlanName :String = "common") {
+        let storyBoard = UIStoryboard(name: "Payment", bundle:Bundle.ShadhinMusicSdk)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "SubscriptionTypeVC") as! SubscriptionTypeVC
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.isNeedSubs = true
+        vc.subscriptionPlatForm = subscriptionPlatForm
+        vc.subscriptionPlanName = subscriptionPlanName
+        if useParent{
+            if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                topController.present(vc, animated: true, completion: nil)
+            }
+        }else{
+            navigationController.present(vc, animated: true, completion: nil)
+        }
     }
     func gotoDownload(with type : DownloadChipType){
         let download = DownloadVC.instantiateNib()

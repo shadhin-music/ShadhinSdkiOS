@@ -42,6 +42,7 @@
                         </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_see_all_arrow 1" translatesAutoresizingMaskIntoConstraints="NO" id="GOH-Rh-eXF">
                             <rect key="frame" x="90" y="10" width="20" height="20"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="FOr-Yg-RqV"/>
                                 <constraint firstAttribute="height" constant="20" id="bxS-Bi-9h2"/>
@@ -119,10 +120,10 @@
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qo7-XW-BMH">
-                                    <rect key="frame" x="487" y="0.0" width="104" height="38.666666666666664"/>
+                                    <rect key="frame" x="479" y="0.0" width="112" height="38.666666666666664"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlJ-og-a2T">
-                                            <rect key="frame" x="0.0" y="8.3333333333333428" width="20" height="22"/>
+                                            <rect key="frame" x="0.0" y="7.3333333333333428" width="24" height="24"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="backward 1"/>
                                             <connections>
@@ -130,7 +131,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jld-8S-qJk">
-                                            <rect key="frame" x="36" y="3.3333333333333428" width="32" height="32"/>
+                                            <rect key="frame" x="40" y="3.3333333333333428" width="32" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="32" id="99R-bx-1Hk"/>
                                                 <constraint firstAttribute="width" constant="32" id="nVB-Q5-i4n"/>
@@ -142,7 +143,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lec-VV-VVM">
-                                            <rect key="frame" x="84" y="8.3333333333333428" width="20" height="22"/>
+                                            <rect key="frame" x="88" y="7.3333333333333428" width="24" height="24"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="forward 1"/>
                                             <connections>
@@ -317,6 +318,9 @@
         <image name="music_ic" width="21" height="20"/>
         <image name="play_pause" width="24" height="24"/>
         <image name="shadhin_logo_text" width="75" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -59,7 +59,7 @@ public enum SMContentType: String, Decodable {
     case podcastVideo   = "VD"
     case video          = "V"
     case playlist       = "P"
-    //case subscription   = "SUB"
+    case subscription   = "SUB"
     case myPlayList     = "MP"
     case unknown
     

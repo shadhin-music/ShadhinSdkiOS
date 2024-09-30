@@ -112,7 +112,7 @@ extension DiscoverMusicDetailsVC: UICollectionViewDelegate,UICollectionViewDataS
         case .playlist:
             let vc3 = goPlaylistVC(content: data)
             self.navigationController?.pushViewController(vc3, animated: true)
-        case .unknown:
+        case .unknown,.subscription:
             Log.warning("Unknown content type \(data.contentType ?? "") not configured in view all")
         case .LK:
             break

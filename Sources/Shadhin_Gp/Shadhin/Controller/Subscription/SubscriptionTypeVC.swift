@@ -37,12 +37,6 @@ class SubscriptionTypeVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.goToSubscriptionVC()
-//        if ShadhinCore.instance.userInBD(){
-//            self.goToSubscriptionOptsBdVC()
-////        }
-////        else{
-////            self.goToSubscriptionVC()
-////        }
     }
     
     deinit {

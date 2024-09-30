@@ -12,7 +12,7 @@ import ShadhinGPObjec
 @IBDesignable
 public class ShadhinMusicView: UIView {
     private var gradientLayer : CAGradientLayer!
-@IBOutlet weak var visualEffect: UIVisualEffectView!
+    @IBOutlet weak var visualEffect: UIVisualEffectView!
     
     @IBOutlet weak var blugImgView: UIImageView!
     @IBOutlet weak var artistLbl: UILabel!
@@ -56,34 +56,8 @@ public class ShadhinMusicView: UIView {
         }
         viewModel.changeTitle = changeTrendingTitle
         viewModel.changeAllButtonsToImageName.append(setButtonImage)
-        
-       // gradientSetup()
+        // gradientSetup()
     }
-    
-//    func gradientSetup(){
-//        
-//        gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = view.bounds
-//        gradientLayer.colors = [
-//            
-//            UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor,
-//            
-//            UIColor(red: 0.081, green: 0.317, blue: 0.488, alpha: 1).cgColor
-//            
-//        ]
-//        
-//        gradientLayer.locations = [0, 1]
-//        
-//        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.25)
-//        
-//        gradientLayer.endPoint = CGPoint(x: 0.5, y: 0.78)
-//        
-//        //gradientLayer.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 1, c: -1, d: 0, tx: 1, ty: 0))
-//        
-//        //self.view.layer.insertSublayer(gradientLayer, at: 0)
-//        self.visualEffect.contentView.layer.insertSublayer(gradientLayer, at: 0)
-//        
-//    }
     
     func clickListenerForMsisdn() {
         if let accessToken = self.accessToken, let vc = self.vc {
@@ -96,7 +70,7 @@ public class ShadhinMusicView: UIView {
             })
         }
     }
-
+    
     
     public override func willMove(toWindow newWindow: UIWindow?) {
         if !viewModel.areWeInsideSDK {
@@ -138,14 +112,14 @@ public class ShadhinMusicView: UIView {
             viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: isPlaying)
         }
     }
-
+    
     func setButtonImage(playingState: PlayingState, contentId: Int?) {
         viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: playingState)
     }
-  
+    
     
     @IBAction func nextTapped(_ sender: Any) {
-
+        
         //AudioPlayer.shared.next()
         goToNextItem()
     }
@@ -166,7 +140,7 @@ public class ShadhinMusicView: UIView {
                 DispatchQueue.main.async {
                     self.playPauseActionHandler()
                 }
-               
+                
             })
         }
     }
@@ -226,7 +200,7 @@ public class ShadhinMusicView: UIView {
             songLbl.text = viewModel.trendingSongs[index].titleEn ?? viewModel.gpMusicContents[index].titleBn
         }
     }
-
+    
     private func fetchDataFromGpExploreMusic() {
         if ConnectionManager.shared.isNetworkAvailable {
             self.vc?.view.lock()
@@ -326,7 +300,7 @@ public class ShadhinMusicView: UIView {
         artistLbl.text = viewModel.gpMusicContents[nextIndex].artists?.compactMap({$0.name}).joined(separator: ", ")
         songLbl.text = viewModel.gpMusicContents[nextIndex].titleEn ?? viewModel.gpMusicContents[nextIndex].titleBn
     }
-
+    
     func goToPreviousItem() {
         let currentIndex = gpCaroselMusicView.currentItemIndex
         let previousIndex = (currentIndex - 1 + gpCaroselMusicView.numberOfItems) % gpCaroselMusicView.numberOfItems // Wrap around
@@ -334,7 +308,7 @@ public class ShadhinMusicView: UIView {
         artistLbl.text = viewModel.gpMusicContents[previousIndex].artists?.compactMap({$0.name}).joined(separator: ", ")
         songLbl.text = viewModel.gpMusicContents[previousIndex].titleEn ?? viewModel.gpMusicContents[previousIndex].titleBn
     }
-
+    
     func formatTimeToMinutesAndSeconds(_ time: TimeInterval) -> String {
         let minutes = Int(time) / 60
         let seconds = Int(time) % 60
@@ -342,7 +316,7 @@ public class ShadhinMusicView: UIView {
     }
     
     @IBAction func playerSliderAction(_ sender: UISlider) {
-       // MusicPlayerV3.shared
+        // MusicPlayerV3.shared
         let value = Float(MusicPlayerV3.audioPlayer.currentItemDuration ?? 1) * sender.value
         MusicPlayerV3.audioPlayer.seek(to: TimeInterval(value))
     }
@@ -422,7 +396,7 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
         }
         
     }
-
+    
     public func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         switch option {
         case .spacing:
